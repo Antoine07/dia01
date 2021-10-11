@@ -33,10 +33,58 @@ Nous allons préciser tout de suite une notion fondamentale sur le mécanisme de
 
 ## Exemple LEGB
 
-![intro legb](images/intro_01.png)
-Passage d'arguments à une fonction
-Python offre 4 méthodes pour passer des arguments à une fonction, voyez les exemples qui suivent :
-![intro legb](images/intro_02.png)
+```python
+
+# Variables gloables
+"""
+Définition des variables dans le script
+
+LEGB 
+"""
+
+# G espace global
+a = 101
+b = 22
+
+def foo():
+    b = 1
+    # E englobant puis il remonte
+    def baz():
+        # Python b regarde localement L
+        print(b)
+        print(a)
+
+    baz()
+
+print( foo() )
+
+# Dans cet espace d'autres variables définies elles peuvent bien sûr dans l'espace de ce script être re-définie
+import builtins
+
+# On écrase la définition de print chose à ne pas faire évidemment
+print = 1
+```
+
+- Passage d'arguments à une fonction 
+
+```python
+def f(a, b):
+	return a, b
+# on peut appeler les arguments dans l'ordre que l'on souhaite
+f(b = 1, a = 3)
+
+# On peut utiliser un tuple pour passer des arguments
+def g(*t):
+	return t
+
+g(1,2,3) # 1,2,3
+
+# Ou en utilisant un passage par dictionnaire
+def g(**t):
+	return t
+
+g(a =1, b= 2, c =3) # { 'a' : 1, 'b' : 2, 'c' : 3 }
+```
 
 ## Quelques définitions de base
 
@@ -99,7 +147,7 @@ while True:
 		break
 ```
 
-## Structure de données
+## Introduction aux Structures de données en Python
 
 En Python une grande force du langage c'est les structures de données. Elles permettent 
 de manipuler les données avec beaucoup d'intelligence et d'optimisation. 
@@ -186,7 +234,7 @@ On notera également que les listes et les chaînes de caractères en Python ont
 
 ## Faire une shallow copy pour copier la liste
 
-Il faut faire ce que l'on appelle une shallow copy pour copier une nouvelle liste dans une nouvelle variable.
+Il faut faire ce que l'on appelle une shallow copy pour copier une nouvelle liste dans une nouvelle variable.C'est une copie peu profonde.
 
 ```python
 q = l[:]
@@ -235,25 +283,73 @@ Ecrire une fonction qui permet de vérifier qu'une liste de caractères ne conti
 testUpper(['A', 'B', 'C' , 'D']) # True
 ```
 
-Utilisez la méthode all de Python sur une liste :
+Utilisez la méthode **all** de Python sur une liste :
 
 ```python
 l = [True, True, True]
 # Si tous les élément sont True alors all retourne True dans le cas contraite False
 res = all(l)
 print(res) # True
+l = [True, False, True, False]
+res = all(l)
+print(res) # False
 ```
 
 ### 03 Exercice multiplication
 
 Ecrire une fonction qui prend deux listes de nombres de même longueur et multiplie les éléments de la liste terme à terme en faisant leur somme.
 
+```python
+def mult(l, m):
+    # une lambda est une fonction anonyme qui permet d'écrire un test court dans un algo
+	"""
+		all vérifiera ici le type de chaque élément de la liste on accepte les listes de float que l'on castera si besoin
+		on pourra traiter des listes de la forme suivante, elles sont acceptées
+		l = [11, "3.6", 9.0]
+	"""
+    check = lambda l : type(l) in [list, tuple] and len(l) > 0 and all(type( float(x) ) == float for x in l)
+
+    assert check(l) and check(m) and len(l) == len(m)
+
+    s = 0
+	# la fonction zip de Python rassemble terme à terme des éléments d'une liste dans un tuple
+	# l = [1,2] et m = [3,4], on aura list(zip(l,m)) [(1,3), (2, 4)]
+
+    for vec in zip(l, m):
+        # unpacking pour assigner les valeurs par décomposition x, y = (1, 2) => x vaut 1 et y vaut 2
+        x, y = vec 
+		# Cas où les chaînes de caractères nous poseraient des pb
+        s += float(x)*float(y)
+    
+    return s
+
+print( mult([1,2], [3, 4]) )
+```
+
+Remarque sur la correction assignation par déballage 
+
+```python
+a, b = 1, 2
+
+# Pour permuter ces valeurs 
+a, b = b, a
+```
+
 ## Compréhension de liste
 
 Elles permettent la construction de liste de manière concise. Ci-dessous construction d'une liste des cubes de 1 à 10 :
 
 ```python
-cubes = [ x**3 for x range (1, 11)]
+cubes = [ x**3 for x in range (1, 11)]
+```
+
+Par exemple on peut créer un zip de deux listes et mettre les tuples de ce zip dans une liste avec de la compréhension de liste.
+
+```python
+l = [1, 2]
+m = [2, 3]
+vectors = [ v for v in zip(l, m)]
+# [(1, 2), (2, 3)]
 ```
 
 ### Compréhension de liste avec un tuple
@@ -309,6 +405,8 @@ for a in range(1, 4):
 
 Ecrire une fonction qui prend deux tuples de nombres de même longueur et multiplie les éléments du tuple terme à terme en faisant leur somme.
 
+Question : est ce que cet exercice n'a pas déjà été fait précédemment dans le cours ?
+
 Un tuple se parcourt comme une liste.
 
 ```python
@@ -320,9 +418,7 @@ for e in t1:
   
 ### 05 Exercice Transposer une matrice
 
-Dans cet exercice vous pouvez essayer d'utiliser les compréhensions de liste.
-
-Soit la matrice suivante : transposez celle-ci, c'est-à-dire transformez les lignes en colonnes à l'aide d'une compréhension de liste :
+Soit la matrice suivante : transposez celle-ci, c'est-à-dire transformez les lignes en colonnes à l'aide d'une compréhension de liste. Pour vous aidez, vous pouvez, si vous le souhaitez le faire sans les compréhensions de liste.
 	
 ```python
 matrix = [
