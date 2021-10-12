@@ -2,10 +2,6 @@
 
 Nous avons déjà abordé les listes comme structure de données.
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 80527b2f353e131b7e2bf4087aa85121c99ecb87
 ## Dictionnaire
 
 Un autre type natif existe en Python : les dictionnaires. Ils sont indexés par des clés, qui peuvent être de n'importe quel type immuable, comme par exemple les chaînes de caractères ou les nombres.
@@ -79,10 +75,6 @@ students.keys() # transforme les clés en liste
 ```
 
 ## Les tuples 1
-<<<<<<< HEAD
-=======
-
->>>>>>> 80527b2f353e131b7e2bf4087aa85121c99ecb87
  Les tuples sont un autre type natif dit de séquence comme les listes et les dictionnaires, les tuples sont non modifiables (non mutable), ils n'ont pas de méthode. 
  Un tuple est donc protégé en écriture. C'est un tableau de hash donc rapide pour l'accès et le parcours de ses éléments. Comme il est non mutable on peut l'utiliser comme clé d'une liste par exemple. On rappelle qu'une clé d'une liste doit être non mutable.
 
@@ -104,10 +96,6 @@ print(u)
 Notez que souvent on utilisera des parenthèses pour définir un tuple par exemple : (1,2,3). Dans certains cas ils seront nécessaires, comme les tuples imbriqués.
 
 ## Les tuples 2
-<<<<<<< HEAD
-=======
-
->>>>>>> 80527b2f353e131b7e2bf4087aa85121c99ecb87
  On peut accéder à une valeur d'un tuple mais on ne peut pas modifier une de ses valeurs :
 
 ```python
@@ -127,10 +115,6 @@ t[0] = 8 # TypeError 'tuple' object does not support item assigment
 ```
 
 ## Les tuples 3
-<<<<<<< HEAD
-=======
-
->>>>>>> 80527b2f353e131b7e2bf4087aa85121c99ecb87
 Déballage de séquence. L'opération suivante permet de déballer des valeurs d'un tuple dans des variables :
 
 ```python
@@ -138,21 +122,6 @@ t = ('a', 'b', 'c')
 x,y,z = t
 ```
 
-<<<<<<< HEAD
-### 01 Exercice Matrix zip
-
-Reprendre la matrice précédente et à l'aide de la fonction native **zip** et de l'opérateur de déballage * essayez de transposer cette matrice.
-
-```python
-matrix = [
-    [1, 2, 3, 4, 5],
-    [6, 7, 8, 9, 10],
-    [11, 12, 13, 14, 15],
- ]
- ```
-
-=======
->>>>>>> 80527b2f353e131b7e2bf4087aa85121c99ecb87
 - La fonction zip 
 
 ```python
