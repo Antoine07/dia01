@@ -2,7 +2,10 @@
 
 Nous avons déjà abordé les listes comme structure de données.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 80527b2f353e131b7e2bf4087aa85121c99ecb87
 ## Dictionnaire
 
 Un autre type natif existe en Python : les dictionnaires. Ils sont indexés par des clés, qui peuvent être de n'importe quel type immuable, comme par exemple les chaînes de caractères ou les nombres.
@@ -76,6 +79,10 @@ students.keys() # transforme les clés en liste
 ```
 
 ## Les tuples 1
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80527b2f353e131b7e2bf4087aa85121c99ecb87
  Les tuples sont un autre type natif dit de séquence comme les listes et les dictionnaires, les tuples sont non modifiables (non mutable), ils n'ont pas de méthode. 
  Un tuple est donc protégé en écriture. C'est un tableau de hash donc rapide pour l'accès et le parcours de ses éléments. Comme il est non mutable on peut l'utiliser comme clé d'une liste par exemple. On rappelle qu'une clé d'une liste doit être non mutable.
 
@@ -97,6 +104,10 @@ print(u)
 Notez que souvent on utilisera des parenthèses pour définir un tuple par exemple : (1,2,3). Dans certains cas ils seront nécessaires, comme les tuples imbriqués.
 
 ## Les tuples 2
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80527b2f353e131b7e2bf4087aa85121c99ecb87
  On peut accéder à une valeur d'un tuple mais on ne peut pas modifier une de ses valeurs :
 
 ```python
@@ -116,6 +127,10 @@ t[0] = 8 # TypeError 'tuple' object does not support item assigment
 ```
 
 ## Les tuples 3
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80527b2f353e131b7e2bf4087aa85121c99ecb87
 Déballage de séquence. L'opération suivante permet de déballer des valeurs d'un tuple dans des variables :
 
 ```python
@@ -123,6 +138,7 @@ t = ('a', 'b', 'c')
 x,y,z = t
 ```
 
+<<<<<<< HEAD
 ### 01 Exercice Matrix zip
 
 Reprendre la matrice précédente et à l'aide de la fonction native **zip** et de l'opérateur de déballage * essayez de transposer cette matrice.
@@ -135,6 +151,8 @@ matrix = [
  ]
  ```
 
+=======
+>>>>>>> 80527b2f353e131b7e2bf4087aa85121c99ecb87
 - La fonction zip 
 
 ```python
@@ -214,120 +232,51 @@ a = { x for x in "abbbbbcccrrreee"  }
 
 - Itération sur les listes et les dictionnaires
 
+## 01 Exercice mississippi
 
-## 02 Exercice population
+Soit la chaîne de caractères suivante : "mississippi" compter le nombre de lettre(s) dans une liste de tuple de chaque lettre.
 
-Récupérez les données dans l'énoncé de l'exercice ci-après.
+## 02 Entiers inversés
 
-Modifiez la liste populations pour ajouter les relations (liste relationships) de chaque user de cette population, vous pouvez par exemple
-ajoutez une clé "relation" ainsi qu'une liste vide dans un premier temps. Puis placez les relations de chaque user dans la liste populations.
-1. Calculer la moyenne des relations.
+Nous souhaitons créer une fonction qui permet d'inverser des entiers signés ou non :
 
-2. Créez une liste représentant les users (id) et le nombre de relation(s) qu'ils possèdent. Et retournez l'utilisateur qui possède le plus de relation(s).
-3. Trouvez les amis des amis de chaque utilisateur. 
-4. En utilisant set sur une liste cela permet de supprimer les doublons, vous obtenez alors un ensemble. Retournez une liste sans doublon.
+-6523 donnerait -3256 par exemple.
 
-```python
+Utilisez les notions du cours pour créer cette fonction. Notamment pensez à caster vos données afin de pouvoir utiliser d'autres fonctions.
 
-populations = [
-    { "id" : 0, "name" : "Alan" },
-    { "id" : 1, "name" : "Albert" },
-    { "id" : 2, "name" : "Jhon" },
-    { "id" : 3, "name" : "Brice" },
-    { "id" : 4, "name" : "Alexendra" },
-    { "id" : 5, "name" : "Brad" },
-    { "id" : 6, "name" : "Carl" },
-    { "id" : 7, "name" : "Dallas" },
-    { "id" : 8, "name" : "Dennis" },
-    { "id" : 9, "name" : "Edgar" },
-    { "id" : 10, "name" : "Erika" },
-    { "id" : 11, "name" : "Isaac" },
-    { "id" : 12, "name" : "Ian" }
-]
+## 03 Calculez la longueur moyenne
 
-relationships = [
-    (0,1), (0,2), (1,2), (1,4),(2,3), (2,5),
-    (3,4), (3,7), (4,5),(4,8), (4,9), (5,7),
-    (5,9), (6,7), (6,8), (7,1), (7,8), (8,9),
-    (10,1),(10,2),(10,3),(11,12),(11,2),(11,5)
-]
-```
+1. Créez une fonction qui donne la longueur moyenne des mots dans une phrase. Utilisez la fonction split sur une chaîne de caractères pour transformer la chaîne en tableau.
 
-## 03 Exercice level
-
-Soit les deux listes suivantes : students et levels ces deux listes sont de même longueur et correspondent respectivement aux noms des étudiants et à leur niveau d'étude, à l'aide de la fonction zip et d'une itération affichez le nom et le niveau de chaque étudiant.
+Remarques pour retirer les caractères de ponctuation dans la phrase vous pouvez utiliser le code suivant basé sur les expressions régulières :
 
 ```python
-students = [
-    "Alan",
-    "Albert",
-    "Jhon",
-    "Brice",
-    "Alexendra",
-    "Brad",
-    "Carl",
-    "Dallas",
-    "Dennis",
-    "Edgar",
-     "Erika",
-     "Isaac",
-    "Ian" 
-]
-
-levels = [4,2,3,5,7,8,2,6,4,3,5]
+import re
+s = "Hello World ?"
+s = re.sub(r'[^\w\s]i','',s) # \w caractère \s espace i insensible à la casse
 ```
-
-## 04 Exercice center
-
-Ecrire une fonction qui retourne tous les utilisateurs qui partagent le même centre d'intérêt.
+Une autre fonction Python peut également être utile, permettant de remplacer certain(s) caractère(s) par autre chose :
 
 ```python
-
-populations = [
-    { "id" : 0, "name" : "Alan" },
-    { "id" : 1, "name" : "Albert" },
-    { "id" : 2, "name" : "Jhon" },
-    { "id" : 3, "name" : "Brice" },
-    { "id" : 4, "name" : "Alexendra" },
-    { "id" : 5, "name" : "Brad" },
-    { "id" : 6, "name" : "Carl" },
-    { "id" : 7, "name" : "Dallas" },
-    { "id" : 8, "name" : "Dennis" },
-    { "id" : 9, "name" : "Edgar" },
-    { "id" : 10, "name" : "Erika" },
-    { "id" : 11, "name" : "Isaac" },
-    { "id" : 13, "name" : "Brice" },
-    { "id" : 14, "name" : "Alice" },
-    { "id" : 15, "name" : "Sophia" },
-    { "id" : 16, "name" : "Rasmus" },
-    { "id" : 18, "name" : "Taylor" },
-    { "id" : 19, "name" : "Olivia" },
-    { "id" : 20, "name" : "Jessica" },
-    { "id" : 21, "name" : "Anna" },
-    { "id" : 22, "name" : "Samantha" },
-    { "id" : 23, "name" : "Grace" },
-    { "id" : 24, "name" : "Anna" },
-    { "id" : 25, "name" : "Alexis" },
-    { "id" : 26, "name" : "Madison" },
-    { "id" : 27, "name" : "Nicole" },
-    { "id" : 28, "name" : "Amanda" },
-    { "id" : 29, "name" : "Haley" }  
-]
-
-centers = [
-    (0, 'PHP'), (0, 'MySQL'), (0, 'Angular'), (1, 'MySQL'), (2, 'Python'), (3, 'PHP'), (4, 'PHP'), 
-    (5, 'Angular'), (6, 'Vuejs'), (7, 'Angular'), (8, 'Big data'), (9, 'PHP'), 
-    (10, 'Angular'), (10, 'NoSQL'), (11, 'NoSQL'), (12, 'Angular'), (13, 'Angular'), (14, 'Angular'), 
-    (15, 'Angular'), (16, 'Angular'), (17, 'PHP'), (18, 'PHP'), (19, 'PHP'), (19,'Angular'), (19, 'Python'),
-    (20, 'Python'), (21, 'Python'), (22, 'Python'), (23, 'Python'), (24, 'PHP'), 
-    (25, 'NoSQL'), (26, 'NoSQL'), (27, 'Big data'), (28, 'NoSQL'), (29, 'Angular'), (29, 'PHP'), (29,'Big data')
-]
-
-"""
-Ecrire une fonction qui trouve les utilisateurs partageant le même centre d'intérêt
-"""
+"Bonjour 'tout' le monde".replace("'", "")
 ```
 
-## 05 Exercice mississippi
+Extrait d'un article de Wikipédia (Python) :
 
-Soit la chaîne de caractères suivante : "mississippi" compter le nombre de lettre dans une liste de tuple.
+```python
+phrase = "Le langage Python est placé sous une licence libre proche de la licence BSD6 et fonctionne sur la plupart des plates-formes informatiques, des smartphones aux ordinateurs centraux7, de Windows à Unix avec notamment GNU/Linux en passant par macOS, ou encore Android, iOS, et peut aussi être traduit en Java ou .NET. Il est conçu pour optimiser la productivité des programmeurs en offrant des outils de haut niveau et une syntaxe simple à utiliser."
+```
+
+2. (facultatif) Quel est le mot ou particule qui apparait/ssent le plus dans le texte ?
+
+
+## 04 Recherche d'un mot dans un texte
+
+Un problème récurrent en analyse de données consiste à rechercher une séquence de valeur dans un tableau.
+
+Ci-dessous on cherche la séquence 1,2,3
+
+```python
+l = [1,3,7,8,9,1,2,3,8]
+
+```
