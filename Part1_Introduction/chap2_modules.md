@@ -2,7 +2,7 @@
 
 Python possède une centaine de Modules standards. D'autres modules (nombreux) tiers existent également que l'on peut importer dans nos projets.
 
-![liste des modules standards](https://docs.python.org/3/py-modindex.html)
+[liste des modules standards](https://docs.python.org/3/py-modindex.html)
 
 ## Introduction
 
@@ -23,7 +23,7 @@ dir(random)
 help(random)
 ```
 
-Notez que help est plutôt utiliser pour demande de l'aide d'une méthode d'un module.
+Notez que help est plutôt utilisé pour demander de l'aide sur une méthode d'un module.
 
 ```python
 # Dans Ipython sinon help(random.randint)

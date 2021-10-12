@@ -71,7 +71,7 @@ print = 1
 def f(a, b):
 	return a, b
 # on peut appeler les arguments dans l'ordre que l'on souhaite
-f(b = 1, a = 3)
+x, y = f(b = 1, a = 3)
 
 # On peut utiliser un tuple pour passer des arguments
 def g(*t):
@@ -80,10 +80,10 @@ def g(*t):
 g(1,2,3) # 1,2,3
 
 # Ou en utilisant un passage par dictionnaire
-def g(**t):
+def h(**t):
 	return t
 
-g(a =1, b= 2, c =3) # { 'a' : 1, 'b' : 2, 'c' : 3 }
+h(a =1, b= 2, c =3) # { 'a' : 1, 'b' : 2, 'c' : 3 }
 ```
 
 ## Quelques définitions de base
