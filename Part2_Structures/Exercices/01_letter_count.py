@@ -26,3 +26,15 @@ for ch in set(phrase):
 print(stat3)
 
 # Est qu'il y a des i dans la phrase et si oui combien.
+
+2 in [1, 2, 3]
+
+def count_letter(phrase, letter):
+    
+    if letter == "" or letter not in phrase:
+        return None
+
+    return phrase.count(letter)
+
+
+print(count_letter(phrase, "p"))
