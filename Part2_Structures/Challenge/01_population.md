@@ -4,16 +4,14 @@
 
 Récupérez les données dans l'énoncé de l'exercice ci-après.
 
-Modifiez la liste populations pour ajouter les relations (liste relationships) de chaque user de cette population, vous pouvez par exemple
-ajoutez une clé "relation" ainsi qu'une liste vide dans un premier temps. Puis placez les relations de chaque user dans la liste populations.
+1. Modifiez la liste populations pour ajouter les relations (liste relationships) de chaque user de cette population, vous pouvez par exemple ajoutez une clé "relation" ainsi qu'une liste vide dans un premier temps. Puis placez les relations de chaque user dans la liste populations en utilisant relationships.
 
-1. Calculer la moyenne des relations.
+2. Calculer la moyenne des relations.
 
-2. Créez une liste représentant les users (id) et le nombre de relation(s) qu'ils possèdent. Et retournez l'utilisateur qui possède le plus de relation(s).
+3. Créez une liste représentant les users (id) et le nombre de relation(s) qu'ils possèdent. Et retournez l'utilisateur qui possède le plus de relation(s).
 
-3. Trouvez les amis des amis de chaque utilisateur. 
+4. Trouvez les amis des amis de chaque utilisateur. 
 
-4. En utilisant set sur une liste cela permet de supprimer les doublons, vous obtenez alors un ensemble. Retournez une liste sans doublon.
 
 ```python
 
