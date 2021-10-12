@@ -278,5 +278,6 @@ Ci-dessous on cherche la séquence 1,2,3
 
 ```python
 l = [1,3,7,8,9,1,2,3,8]
-
 ```
+
+Créez une fonction qui permet de rechercher un mot dans un texte ou une liste, notez que cette fonction sera identique pour un texte ou une liste.
