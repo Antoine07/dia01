@@ -57,3 +57,5 @@ print(search_words(l, seq))
 
 
 # Slicing
+
+print( [ i for i in range(len(l) - len(seq) + 1) if l[i:(i+len(seq))] == seq ] )
