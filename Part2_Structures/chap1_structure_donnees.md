@@ -244,7 +244,7 @@ Utilisez les notions du cours pour créer cette fonction. Notamment pensez à ca
 
 Un problème récurrent en analyse de données consiste à rechercher une séquence de valeur dans un tableau.
 
-Ci-dessous on cherche la séquence 1,2,3
+Ci-dessous on cherche la séquence   
 
 ```python
 l = [1,3,7,8,9,1,2,3,8, 1, 2, 3, 7, 8, 9, 1, 2, 3, 8, 10, 1, 2, 3]
@@ -257,19 +257,19 @@ l = [1,3,7,8,9,1,2,3,8, 1, 2, 3, 7, 8, 9, 1, 2, 3, 8, 10, 1, 2, 3]
 
 ## 04 Calculez la longueur moyenne
 
-1. Créez une fonction qui donne la longueur moyenne des mots dans une phrase. Utilisez la fonction split sur une chaîne de caractères pour transformer la chaîne en tableau.
+1. Créez une fonction qui donne la longueur moyenne des mots et particules dans une phrase. Utilisez la fonction split sur une chaîne de caractères pour transformer la chaîne en tableau.
 
 Remarques pour retirer les caractères de ponctuation dans la phrase vous pouvez utiliser le code suivant basé sur les expressions régulières :
 
 ```python
 import re
-s = "Hello World ?"
-s = re.sub(r'[^\w\s]i','',s) # \w caractère \s espace i insensible à la casse
+s = "Hello World, . ; ?"
+s = re.sub(r"[^\w\s]", "", s)
 ```
 Une autre fonction Python peut également être utile, permettant de remplacer certain(s) caractère(s) par autre chose :
 
 ```python
-"Bonjour 'tout' le monde".replace("'", "")
+"Bonjour 'tout' le monde".replace(r'"\'', "")
 ```
 
 Extrait d'un article de Wikipédia (Python) :
