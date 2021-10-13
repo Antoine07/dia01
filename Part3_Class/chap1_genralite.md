@@ -54,19 +54,26 @@ Afin de pouvoir avoir un nom spécifique pour chaque produit il est donc préfé
 
 class Product:
 
+    # variable lié à la classe et non à l'instance
+    productId = "123"
+
+    # le premier argument self représente l'instance de la classe
     def setName(self, name):
         # sera définit que si on appelle la méthode setName
         self.name = name
 
+Product.productId = "321"
 p1 = Product()
 p1.setName("Car")
 
 p2 = Product()
-p2.setName("Bike)
+p2.setName("Bike")
 
 print(p1.name) # Car
 print(p2.name) # Bike
 
+print(p1.productId)
+print(p2.productId)
 ```
 
 ## Méthode bound ~ lier la méthode à l'instance
@@ -110,35 +117,14 @@ print(h.message) # affichera Hello World!
 
 h2 = Hello("Bonjour le monde")
 print(h2.message) # affichera Bonjour le monde
-
 ```
 
 ## Méthodes privées d'une classe
 
 Il n'y a pas de propriété privée en Python, on adopte classiquement la convention suivante pour spécifier que ces attributs sont privés : prefixer le nom des propriétés par un enderscore.
 
-Par convention les méthodes privées en Python seront préfixées par deux enderscores.
+Par convention les méthodes privées en Python seront préfixées par un/deux enderscores.
 
-## 00 Exercice que fait ce programme
-
-```python
-class Mapping:
-    def __init__(self, iterable):
-        self.items_list = []
-        self.__update(iterable)
-
-    def update(self, iterable):
-        for item in iterable:
-            self.items_list.append(item)
-
-    __update = update
-
-class MappingSubclass(Mapping):
-
-    def update(self, keys, values):
-        for item in zip(keys, values):
-            self.items_list.append(item)
-```
 
 ### Setter et getter en Python
 
@@ -160,6 +146,43 @@ class A:
     @x.deleter
     def x(self):
         del self._x
+```
+
+## 001 Exercice Product
+
+Créez une classe Product avec name et price. Créez le setters et getter uniquement pour le prix comme vu précédement afin de données valeurs à vos objets de type Product (hydratation des objets).
+
+Cette classe aura un attribut attaché à la classe qui définiera sa tva.
+
+Créez deux produits apple et orange respectivement avec les prix HT suivants : 1.2 et 1.1, la tva sera de 20%. 
+
+Affichez le prix de chaque produit et faites la sommes des deux produits.
+
+## 00 Exercice que fait ce programme ? (à ne pas réviser)
+
+Faites une instance de la classe MappingSubclass, est une classe qui hérite de Mapping
+
+```python
+class Mapping:
+    def __init__(self, iterable):
+        self.items_list = []
+        self.update(iterable)
+
+    def update(self, iterable):
+        for item in iterable:
+            self.items_list.append(item)
+
+    __update = update
+
+# héritage de la classe Mapping 
+class MappingSubclass(Mapping):
+
+    # surcharge le comportement de la méthode update de la classe mère
+    def update(self, keys, values):
+        for item in zip(keys, values):
+            self.items_list.append(item)
+
+mapSub = MappingSubclass("Bonjour")
 ```
 
 ## Arbre d'héritage entre classe et objet
