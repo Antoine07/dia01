@@ -264,7 +264,9 @@ Remarques pour retirer les caractères de ponctuation dans la phrase vous pouvez
 ```python
 import re
 s = "Hello World, . ; ?"
-s = re.sub(r"[^\w\s]", "", s)
+# le troisième paramètre permet d'ignorer la case
+# dans des crochets cela signifie tout ce qui n'est pas un mot ou un espace sera remplacé par une chaîne de caractère vide
+s = re.sub(r"[^\w\se]", "", s, flags=re.IGNORECASE)
 ```
 Une autre fonction Python peut également être utile, permettant de remplacer certain(s) caractère(s) par autre chose :
 
