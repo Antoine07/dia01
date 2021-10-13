@@ -316,7 +316,7 @@ comportant uniquement des numériques, vous testerez votre méthode sur la chaî
 
 ```python
 
-phrase = '800 : 978 : fh:34:hjj:    9102kjhgA' 
+phrase = '8790: bonjour le monde:8987:7777:Hello World:    9007' 
 
 p = Parser(':', phrase)
 print( p )
