@@ -98,40 +98,6 @@ import square as s
 print(s.square(10))
 ```
 
-## 01 Exercice Suite de Fibonacci
-
-Créez un package Algo dans lequel vous créez un module fibo qui est soit un script soit un module importé dans un fichier app.py. Vous respecterez l'arborescence suivante :
-
-```text
-Algo/
-    fibo.py
-app.py
-```
-
-La fonction fib dans le module fibo possède un argument qui donnera la limite de la valeur à retourner dans la suite.
-
-1. Vous pouvez également passer des valeurs en console à l'aide du module standard sys de Python.
-
-```bash
-python fibo.py 50
-0 1 1 2 3 5 8 13 21 34
-```
-
-Module sys, si vous exécutez un fichier test.py par exemple avec sys, vous pouvez lors de l'exécution de fichier passer une/des valeur(s) à votre script.
-
-```python
-import sys
-print( int(sys.argv[1]) )
-```
-
-```bash
-python test.py 12
-12
-```
-
-2. Testez ce module dans le fichier app.py
-
-
 ## Package plus complexe
 
 Vous pouvez également avoir une structure plus complexe de modules, supposons que l'on ait la structure de modules suivantes :
@@ -142,7 +108,7 @@ Algo/
         addition.py
     arithmetic/
         fibo.py
-    app.py
+app.py
 ```
 
 Ainsi dans le script app.py vous pourrez importer les fonctions du module arithmetic comme suit 

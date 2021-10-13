@@ -62,7 +62,7 @@ students = [
     "Ian" 
 ]
 
-levels = [4,2,3,5,7,8,2,6,4,3,5]
+levels = [4,2,3,5,7,8,2,6,4,3,5, 7, 5]
 ```
 
 ## Partie 3 (facultative) 
