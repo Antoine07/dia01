@@ -201,8 +201,10 @@ class Hello:
     def getMessage(self):
         return self.message
 
+# ajout à la classe
 Hello.words = Hello.message.split()
 
+# instance
 h = Hello()
 
 print(h.words)
@@ -229,12 +231,13 @@ vars(Hello)
 
 Vous avez une fonction vars qui vous permet de visualiser ce principe dans le script.
 
-## Comportement ou méthode
+## Comportement <=> méthode
 
 Dans une classe on définit ce que l'on appelle des **comportements**, ou méthodes, ce sont des fonctions Pythons implémentées dans la classe.
+
 Lorsqu'on appelera la méthode sur une instance de la classe, Python référencera cette instance à l'aide du mot clé **self**, c'est l'instance de la classe. 
 
-Le mot self est un mot arbitraire vous pourriez utiliser un autre mot, mais la convention est l'utilisation du mot self.
+Le mot self est un mot arbitraire vous pourriez utiliser un autre mot, mais la convention est l'utilisation du mot **self**.
 
 ## Méthodes spéciales
 
@@ -252,7 +255,7 @@ class Dog:
 
 Notez qu'une variable définie avant la méthode d'initialisation sera attachée à la classe elle-même.
 
-On peut implémenter des méthodes **spéciales** dans une classe pour utiliser par la suite des fonctions builints comme len, ou des opérateurs d'appartenance comme in... Voyez l'exemple suivant nous avons défini des comportements 
+On peut implémenter des méthodes **spéciales** dans une classe pour utiliser par la suite des fonctions **builints** comme **len**, ou des opérateurs d'appartenance comme **in**... Voyez l'exemple suivant nous avons défini des comportements 
 
 
 ```python
