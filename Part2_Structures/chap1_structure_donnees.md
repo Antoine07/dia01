@@ -231,11 +231,31 @@ Soit la chaîne de caractères suivante : "mississippi". Comptez le nombre d'occ
 
 Nous souhaitons créer une fonction qui permet d'inverser des entiers signés ou non :
 
--6523 donnerait -3256 par exemple.
+Par exemples :
 
-Utilisez les notions du cours pour créer cette fonction. Notamment pensez à caster vos données afin de pouvoir utiliser d'autres fonctions.
+-6523 donnerait -3256 
 
-## 03 Calculez la longueur moyenne
+123 donnerait 321
+
+Utilisez les notions du cours pour créer cette fonction. Notamment pensez à caster vos données afin de pouvoir les utiliser avec d'autre(s) fonction(s).
+
+
+## 03 Recherche d'un mot dans un texte
+
+Un problème récurrent en analyse de données consiste à rechercher une séquence de valeur dans un tableau.
+
+Ci-dessous on cherche la séquence 1,2,3
+
+```python
+l = [1,3,7,8,9,1,2,3,8, 1, 2, 3, 7, 8, 9, 1, 2, 3, 8, 10, 1, 2, 3]
+```
+
+1. Créez une fonction qui permette de rechercher un mot dans un texte ou une liste, notez que cette fonction sera identique pour un texte, un itérable... Il serait intéressant que cette fonction retourne le premier indice de la position de la séquence trouvée dans la liste. 
+
+2. Retournez maintenant tous les indices de toutes les séquences trouvées dans la liste.
+
+
+## 04 Calculez la longueur moyenne
 
 1. Créez une fonction qui donne la longueur moyenne des mots dans une phrase. Utilisez la fonction split sur une chaîne de caractères pour transformer la chaîne en tableau.
 
@@ -257,18 +277,3 @@ Extrait d'un article de Wikipédia (Python) :
 ```python
 phrase = "Le langage Python est placé sous une licence libre proche de la licence BSD6 et fonctionne sur la plupart des plates-formes informatiques, des smartphones aux ordinateurs centraux7, de Windows à Unix avec notamment GNU/Linux en passant par macOS, ou encore Android, iOS, et peut aussi être traduit en Java ou .NET. Il est conçu pour optimiser la productivité des programmeurs en offrant des outils de haut niveau et une syntaxe simple à utiliser."
 ```
-
-2. (facultatif) Quel est le mot ou particule qui apparait/ssent le plus dans le texte ?
-
-
-## 04 Recherche d'un mot dans un texte
-
-Un problème récurrent en analyse de données consiste à rechercher une séquence de valeur dans un tableau.
-
-Ci-dessous on cherche la séquence 1,2,3
-
-```python
-l = [1,3,7,8,9,1,2,3,8]
-```
-
-Créez une fonction qui permet de rechercher un mot dans un texte ou une liste, notez que cette fonction sera identique pour un texte ou une liste.
