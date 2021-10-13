@@ -6,7 +6,7 @@ En Python tout est objet.
 
 On définit une classe à l'aide du mot clé class. 
 
-La classe est un objet et on crée une nouvelle instance de la classe en l'appelant celle-ci dans le code source.
+La classe est un objet et on crée une nouvelle instance de la classe en appelant celle-ci dans le code source.
 
 La création d'une classe crée un espace de nommage de la classe, vous pouvez accéder à cet espace avec la fonction builtins vars de Python. 
 
