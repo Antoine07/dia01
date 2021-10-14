@@ -14,10 +14,10 @@ class Parser:
         self.parsed_line = [
             i.strip() for i in self.phrase.split(self.sep) if i.strip().isdigit()
         ]
+
     """
         Le type de votre fonction spéciale __str__ doit être de type str
     """
-
     def __str__(self):
         self.__parse()
 

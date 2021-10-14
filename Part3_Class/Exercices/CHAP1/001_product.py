@@ -1,7 +1,9 @@
 
+"""
+Une classe doit avoir un rôle unique et des responsabilités limités
+"""
 class Product:
-    tva = .2
-
+    
     def __init__(self, name):
         # Attention les setter ne sont pas appelés à l'instanciation de Product
         self._name = name
@@ -33,11 +35,6 @@ class Product:
     def name(self):
         del self._name
 
-    def priceTTC(self):
-
-        # On peut également appeler le getter price dans la classe
-        return round(self.price * (1 + Product.tva ), 2)
-
 apple = Product(name = "apple")
 apple.price = "1.4"
 
@@ -47,4 +44,19 @@ orange.price = 1.1
 # On passe par le setter 
 print(apple.price, type(apple.price))
 
-print(apple.priceTTC() + orange.priceTTC())
+
+"""
+La responsabilité de cette classe serait d'acheter des produits et de donner le total du prix des produits commandés
+Single Responsability
+"""
+class Cart:
+    tva = .2
+
+    def __init__(self):
+        self.storage = []
+
+    def buy(self, product):
+        pass
+
+    def total(self):
+        pass
