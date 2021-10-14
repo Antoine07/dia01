@@ -441,6 +441,22 @@ B(y1, y2, ..., yn)
 ![distances](./images/distances.png)
 
 
+Pour calculer la distance entre deux points, on appliquera la définition suivante, en définissant A(x, y) et B(x, y)
+
+```python
+import math as m
+
+class Point:
+    pass
+
+A = Point(x=1, y=2)
+B = Point(x=2, y=3)
+
+"""
+d =m.sqrt( (A.x - B.x)**2 + (A.y - B.y)**2 )
+"""
+```
+
 ## 05 Matrice GenerateMatrix
 
 Vous devez définir une classe métier bien structurée et réutilisable
