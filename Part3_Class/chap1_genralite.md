@@ -403,6 +403,8 @@ print(hasCap.parse())
 
 ## 04 Distance euclidienne
 
+Remarque générale : pensez à importer le module math de Python dans vos scripts pour cet exercice. Voyez également la notion de distance à la fin de l'exercice dans la partie indications.
+
 1. Créez une classe Distance qui calcule la distance entre deux points représentés sous forme d'un objet.
 
 ```python
@@ -413,8 +415,6 @@ B = Point(15, 1)
 # Calcule de la distance
 print(Distance(A,B).euclidean())
 ```
-
-Remarque : pensez à importer le module math de Python
 
 2. Créez une deuxième classe dans un autre fichier, cette classe possèdera une méthode qui calculera la moyenne des distances par rapport à un centroïd.
 
@@ -431,7 +431,14 @@ distance = DistanceAverage(A, B, C, D, E)
 print(distance.euclidean(centroid))
 ```
 
-3. Modifiez cette dernière classe pour changez facilement de norme
+3. Modifiez cette dernière classe pour changez facilement de norme. Vous pouvez utiliser une lambda par exemple.
+
+Indications, ci-dessous les distances absolue, euclienne et Minkowski pour les points suivants A et B
+
+A(x1, x2, ..., xn)
+B(y1, y2, ..., yn)
+
+![distances](./images/distances.png)
 
 
 ## 05 Matrice GenerateMatrix
