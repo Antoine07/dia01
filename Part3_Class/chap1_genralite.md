@@ -380,6 +380,11 @@ class A:
 
 # La classe A hérite de la classe object.
 print(A.__bases__)
+
+class B(A):
+    pass
+
+print(B.__bases__)
 ```
 
 ### 03 Exercice HasCap 
@@ -392,10 +397,9 @@ phrase = "Le langage Python est placé sous une licence libre proche de la licen
 
 hasCap = HasCap(phrase)
 
-print(hasCap)
+print(hasCap.parse())
 # {'Le': 1, 'Python': 1, 'BSD6': 1, 'Windows': 1, 'Unix': 1, 'GNU/Linux': 1, 'Android,': 1, 'Java': 1, '.NET.': 1, 'Il': 1}
 ```
-
 
 ## 04 Distance euclidienne
 
