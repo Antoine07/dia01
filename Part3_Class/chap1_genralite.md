@@ -440,7 +440,6 @@ B(y1, y2, ..., yn)
 
 ![distances](./images/distances.png)
 
-
 Pour calculer la distance entre deux points, on appliquera la définition suivante, en définissant A(x, y) et B(x, y)
 
 ```python
