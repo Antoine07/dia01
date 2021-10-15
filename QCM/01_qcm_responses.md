@@ -468,7 +468,7 @@ _Réponses_ :
 
 - [X] Un dictionnaire 
 
-- [X] Un set (ensemble)
+- [X] Un set (ensemble) OPTION
 
 - [ ] Une liste 
 
