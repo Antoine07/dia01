@@ -23,6 +23,7 @@ class GenerateMatrix:
 
         while count > 0:
             i, j = self.lines()
+            # assignation par décomposition des valeurs de lignes
             self.Matrix[i], self.Matrix[j] = self.Matrix[j], self.Matrix[i]
             count -= 1
 
@@ -38,7 +39,10 @@ class GenerateMatrix:
 
 GenerateMatrix.rMin = 0
 GenerateMatrix.rMax = 1
+GenerateMatrix.complexity = 1000
 
 gen = GenerateMatrix(5, 7)
 
+print(gen.Matrix)
+print(gen.shuffle())
 print(gen.Matrix)
