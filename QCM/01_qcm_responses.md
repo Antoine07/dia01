@@ -288,6 +288,7 @@ q  = r
 - [ ] 
 
 ```python
+# shallow copy <=> copie peu profonde
 q = r[:]
 ```
 
@@ -304,6 +305,24 @@ q = [ s[:] for s in r]
 """
 Il faut également copier les sous-références dans la liste
 """
+ r = [[1, 2], [3, 4], [5, 6]] # source de vérité 
+id(r)
+# 4449534720
+
+id(r[0])
+# 4449534208
+
+q = r[:]
+id(q)
+# 4449526464
+
+# ATTENTION ICI ON A LA MEME REFERENCE POUR LES SOUS LISTES
+id(r[0])
+# 4449534208
+
+# Par contre la copie profonde que l'on propose ci-après
+q = [ s[:] for s in r ]
+# Fait également des copies de chaque sous liste de la liste dans une nouvelle liste
 ```
 
 ## Question 12
@@ -688,6 +707,15 @@ _Réponses_ :
 - [X] Message(m+m) + m
 Il faut ajouter un objet de type Message à un objet de type Message Message(m+m) est un objet de type message
 
+```python
+# ICI les objets de type Message implémentent la méthode spéciale __add__
+# est un objet de type Message 
+Message(m + m ) 
+
+# On peut donc l'ajouter à un autre objet de type Message, ici la méthode __add__ sera correctement appelée
+Message(m + m )  + m 
+```
 
 - [ ] Message("Bonjour") + Message("Bonjour") + Message("Bonjour")
+
 - [ ] (m + m) + m
