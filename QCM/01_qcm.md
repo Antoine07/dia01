@@ -93,7 +93,7 @@ _Réponses_ :
 
 ## Question 5
 
-Quel principe Python LEGB utilise Python pour trouver la définition de la variable b dans le script courant ?
+Quel principe Python LEGB utilise Python pour trouver la définition de la variable print dans le script courant ?
 
 Répondez en choisissant une seule et bonne réponse ci-dessous.
 
