@@ -494,7 +494,7 @@ Les conteneurs mutables comme les listes, les ensembles, ou les dictionnaires ne
 
 - [ ] Une liste NON CAR MODIFIABLE PAR APPEND OU ASSIGNATION
 
-- [X] Un objet # UN OBJET A UN HASH UNIQUE, c'est particulier mais ça marche ...
+- [X] Un objet # UN OBJET A UN HASH UNIQUE, c'est particulier mais ça marche ... (OPTION)
 
 ```python
 class A:
