@@ -166,7 +166,7 @@ Faites une instance de la classe MappingSubclass, est une classe qui hérite de 
 class Mapping:
     def __init__(self, iterable):
         self.items_list = []
-        self.update(iterable)
+        self.__update(iterable)
 
     def update(self, iterable):
         for item in iterable:
