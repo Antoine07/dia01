@@ -531,8 +531,8 @@ res
 _Réponses_ :
 
 - [ ] None
-- [ ] Un objet de type zip
-- [X] [('JS', 6), ('Python', 3), ('PHP', 8)]
+- [X] Un objet de type zip
+- [ ] [('JS', 6), ('Python', 3), ('PHP', 8)]
 - [ ] 3
 
 ## Question 20
