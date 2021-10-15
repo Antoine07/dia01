@@ -11,7 +11,7 @@ Comptez le nombre de fois que vous atteignez la cible en simulant l'expérience 
 
 - Il y a autant de chance d'atteindre n'importe quel point de la surface 20 * 20 et les tires ne vise pas le cercle.
 
-- La surface 2pi*2, 2piR formule de l'aire d'un cercle, représente ce que l'on souhaite atteindre.
+- La surface pi*r**2 formule de l'aire d'un cercle, représente ce que l'on souhaite atteindre.
 
 La formule dans ce cas est assez simple à appliquer par rapport à formule théorique : 
 
