@@ -129,6 +129,9 @@ dataset = np.array([
       ( "Roger Le Voisi", 1.5)
 ], dtype=dt)
 
+
+# Accéder au valeur par rapport à la clé du tuple qui définit le type composite
+print(dataset['name'][1:])
 ```
 
 ### 4.2 Création d'un array
@@ -173,6 +176,7 @@ Une autre manière de créer ou générer un tableau Numpy est l'utilisation de 
 
 # Créer un tableau de 3 zéros.
 np.zeros(3)
+np.zeros((2,2))
 
 # Créer un tableau de dimension 2 lignes et 3 colonnes que de 1.
 np.ones((2,3))
@@ -180,6 +184,13 @@ np.ones((2,3))
 # Remplir un tableau d'une seule valeur, tableau de 2 lignes 3 colonnes
 # avec la valeur 4.5
 np.full((2,3), 4.5)
+```
+
+On peut également utiliser empty pour créer un tableau "vide" d'une certaine dimension
+
+```python
+collections = np.empty(10)
+# ce tableau sera rempli plus tard avec des données
 ```
 
 ## 6. Information sur un tableau
@@ -269,6 +280,32 @@ a = np.array([[1,2,3], [4,5,6], [7,8,9]])
 ```
 
 ![slicing 2d](images/slicing_2d.png)
+
+
+- Exemples
+
+```python
+a = np.array([[1,2,3], [4,5,6], [7,8,9]])
+
+print(a[:, 1])
+# [2 5 8]
+
+print(a[1, :])
+# [4 5 6]
+
+print(a[1])
+# [4 5 6]
+
+print(a[1, 1:])
+# [5 6]
+
+print(a[:, 1:])
+"""
+[[2 3]
+ [5 6]
+ [8 9]]
+ """
+```
 
 
 ### 7.2 les tableaux 3d
@@ -419,6 +456,12 @@ array([2, 4, 6])
 n = np.array([2, 4, 6])
 n/2
 
+print(n.dtype) # int8
+p = n*1.2 # un array float64 nouveau tableau 
+p.dtype
+
+print(n) # la matrice initiale n'a pas changer
+
 """
 array([ 1.,  2.,  3.])
 """
@@ -446,6 +489,8 @@ y1 = np.array([[5, 5, 1, 6, 5],
        [3, 4, 7, 0, 8],
        [1, 8, 2, 0, 2]])
 
+
+yy1 = np.copy(y1, copy=True)
 ```
 
 Soit maintenant le tableau de dimension 5x5x5 suivant, répondez aux questions ci-dessous :
