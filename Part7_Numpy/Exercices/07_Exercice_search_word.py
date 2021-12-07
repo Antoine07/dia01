@@ -42,3 +42,23 @@ line = [6, 9, 1, 2, 3, 4, 3, 1, 4, 3, 9, 6, 2, 2]
 
 print(search_word(line))
 print(np.apply_along_axis(search_word, 1, dataNumbers))
+
+# Méthode Mickael
+
+def search_word(line):
+    for i in range(1+len(line) - len(w)):
+        word = line[i:i+len(w)]
+        j = 0
+        for k, ch in enumerate(word):
+            if ch == w[k]:
+                j += 1
+
+        if j == len(word):
+            return i
+
+    return None
+
+line = [6, 9, 1, 2, 3, 4, 3, 1, 4, 3, 9, 6, 2, 2]
+
+print(search_word(line))
+print(np.apply_along_axis(search_word, 1, dataNumbers))
