@@ -21,4 +21,4 @@ students_sanitize = sanitize(students, 'Name:', 'phone:')
 mask = ["30" in el[1].split("-") for el in students_sanitize]
 print(mask)
 
-students[mask]
+print( len( students[mask] ) )
