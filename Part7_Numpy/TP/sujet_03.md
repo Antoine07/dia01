@@ -3,10 +3,10 @@
 
 Récupérez le dataset dans le dossier Data : "titanic.csv".
 
-1. Récupérez les données suivantes : Sex Age Pclass Survived, Name. Créez un dataset en fonction de ces paramètres.
+1. Récupérez les données suivantes : Sex Age Pclass Survived, Name. Créez un np.array en fonction de ces paramètres.
 *Attention, ne récupérez pas les individus qui n'ont pas d'Age.*
 
-2. Combien de personnes au total ont survécu ? Calculez la moyenne des survivants.
+2. Combien de personnes au total ont survécu ? Calculez le pourcentage des survivants total.
 
 3. Calculez le pourcentage de femme et d'homme qui ont survécu. 
 
@@ -21,4 +21,4 @@ Récupérez le dataset dans le dossier Data : "titanic.csv".
 8. Calculez l'age moyen des personnes qui ont survécu.
 
 
-Si vous avez terminé votre recherche proposez d'étudier d'autres critères dans le dataset.
+Si vous avez terminé votre recherche proposez d'autres exploration des données du Titanic.
