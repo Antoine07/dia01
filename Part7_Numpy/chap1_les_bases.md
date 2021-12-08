@@ -893,7 +893,7 @@ np.isnan(x)
 
 ## Révisions
 
-### 00 Exercice slicing
+### 10 Exercice slicing
 
 Soit m le tableau suivant :
 
@@ -911,7 +911,6 @@ m = np.random.randint(1, 5, (10,10))
 
 5. Même consigne mais maintenant pour les lignes.
 
-
 6. Faites la somme des valeurs paires de la matrice.
 
 7. Faites la somme des valeurs paires des colonnes.
@@ -920,8 +919,7 @@ m = np.random.randint(1, 5, (10,10))
 
 9. Créez un nouveau tableau à partir des valeurs paires de la matrice m
 
-
-### 10 Exercice multiple de 11 (**)
+### 12 circular algo (**)
 
 Créez une fonction circular qui prend en paramètre un entier n et renvoie une matrice de taille n*n et calcule toutes les permutations circulaires du cycle de longueur n, voyez l'exemple ci-dessous :
 
