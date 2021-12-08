@@ -39,15 +39,11 @@ Récupérez le dataset dans student.csv, dans le dossier data et étudiez le cri
 
 Récupérez le dataset **note_statistiques.csv** et faite un diagramme en baton des notes en statistiques.
 
-Renommez la colonne Notes examen de statistiques en Notes.
+1. Calculez les fréquences des notes. Ajoutez un argument à votre tableau numpy.
 
-1. Que constatez-vous pour ce diagramme ?
+2. Faites maintenant des classes de valeurs de largeur 4 pour les notes, ajoutez un argument Notes_bin dans votre tableau.
 
-2. Quelle est le type de la variable notes ?
-
-3. Faites maintenant des classes de valeurs de largeur 4 pour les notes.
-
-4. Créez à partir du dernier regroupement un historgramme.
+4. Créez à partir de un nouveau tableau un diagramme en baton regroupant les notes dans par classe, utilisez un dictionnaire. 
 
 La classe modale est la classe dont la fréquence par unité d'amplitude est la plus élevée.
 
@@ -55,41 +51,6 @@ Cette classe correspond donc au rectangle le plus haut de l'histogramme des fré
 
 Trouvez la classe modale de notre dataset notes statistiques.
 
-## Valeurs centrales
-
-### Définition du mode
-
-Le mode correspond à la valeur de la variable pour laquelle l'effectif (ou la fréquence) est le plus grand.
-
-Recensement des familles dans la population dont le nombre d'enfants de moins de 14 ans.
-
-| Nombre d'enfants |     Nombre de famille    |
-| ---------------  |  ----------------------: |
-| 0                |        2601              |
-| 1                |        6290              |
-| 2                |        2521              |
-| 3                |        849               |
-| 4                |        137               |
-
-Ici c'et la valeur 1.
-
-## Remarques
-
-Certaines variables peuvent présenter plusieurs modes.
-
-### 03 Exercice variable continue
-
-| Prix             |     Effectifs            |
-| -------------    |  ----------------------: |
-| [210, 230]       |        30                |
-| [210, 230]       |        60                |
-| [210, 230]       |        100               |
-| [210, 230]       |        20                |
-|                  |        total = 210       |
-
-Créez un histogramme à partir des données suivantes. Pensez à créer un DataFrame et définisser des classes à l'aide de la méthode cut de Pandas, par exemple. Et déterminez enfin le mode de la série statistique.
-
-Quel est le type de la variable Prix ?
 
 ## Médiane et Quantile
 
@@ -266,6 +227,42 @@ Ecrire un script en Python qui permet de calculer la variance de cette série. P
 2.4 On définit l'écart type comme étant la racine de la variance. Calculez l'écart type des notes de cette classe.
 
 3. L'enseignant augment toutes les notes de 1 point. Quelle conséquence cela a pour les calculs précédents ?
+
+## Valeurs centrales
+
+### Définition du mode
+
+Le mode correspond à la valeur de la variable pour laquelle l'effectif (ou la fréquence) est le plus grand.
+
+Recensement des familles dans la population dont le nombre d'enfants de moins de 14 ans.
+
+| Nombre d'enfants |     Nombre de famille    |
+| ---------------  |  ----------------------: |
+| 0                |        2601              |
+| 1                |        6290              |
+| 2                |        2521              |
+| 3                |        849               |
+| 4                |        137               |
+
+Ici c'et la valeur 1.
+
+## Remarques
+
+Certaines variables peuvent présenter plusieurs modes.
+
+### 03 Exercice variable continue
+
+| Prix             |     Effectifs            |
+| -------------    |  ----------------------: |
+| [210, 230]       |        30                |
+| [210, 230]       |        60                |
+| [210, 230]       |        100               |
+| [210, 230]       |        20                |
+|                  |        total = 210       |
+
+Créez un histogramme à partir des données suivantes. Pensez à créer un DataFrame et définisser des classes à l'aide de la méthode cut de Pandas, par exemple. Et déterminez enfin le mode de la série statistique.
+
+Quel est le type de la variable Prix ?
 
 ## Violinplot
 
