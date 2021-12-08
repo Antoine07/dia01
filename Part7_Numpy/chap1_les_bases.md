@@ -761,6 +761,26 @@ print( a == b )
 print(np.all(a == b))
 ```
 
+Attention, aux opérateurs binaires & et | utilisés ici, cela ne change rien pour nous, vous devez mettre des parenthèses et continuez à les utiliser comme nous l'avons fait dans le cours. 
+
+Si vous vous intéressez à ce qu'est un opérateur binaire voici une explication de son principe d'utilisation :
+
+Pour un & si c'est 1 et 1 alors c'est 1 et sinon 0 comme dans la table de vérité pour le connecteur &&.
+```python
+a = 10 # 1010 (binaire)
+b = 4 #  0100 
+
+# Affiche 0
+print( a &  b ) 
+
+a = 12 # 1100
+b = 8 #  1000
+
+# Affiche 8 représentation décimal de 1000 pour a & b 
+print( a & b)
+
+```
+
 ### 07 Exercice phrase word
 
 L'objectif de cet exercice est de déterminer la première position dans chaque ligne du tableau **dataNumbers** de la séquence **w** ci-dessous.
@@ -843,3 +863,84 @@ np.isin(dataset, y)
 ```
 
 3. Supprimez toutes les lignes comportant au moins un multiple de 11.
+
+
+
+## 12. Supprimer des lignes avec des données manquantes
+
+Souvent dans les datasets des données manquent. Elles ont le type NaN dans Numpy. Pour qu'un tableau Numpy puisse contenir ce type de données manquantes il doit avoir le type float64 :
+
+```python
+
+# Sans définir le type du tableau celui-ci aura le type float64
+x = np.array([[1,2,3], [4,5,np.nan], [7,8,9]])
+
+print(x.dtype)
+# float64
+
+```
+
+La méthode np.isnan suivante permet de créer un masque sur les données manquent du tableau et permet de mettre en place une stratégie pour supprimer des lignes avec des données manquantes.
+
+```python
+np.isnan(x)
+"""
+[[False False False]
+ [False False  True]
+ [False False False]]
+"""
+```
+
+## Révisions
+
+### 00 Exercice slicing
+
+Soit m le tableau suivant :
+
+1. Affichez les multiples de 3 de la première ligne du tableau m.
+
+2. Affichez la deuxième colonne et faite la somme des nombres pairs de cette colonne.
+
+```python
+m = np.random.randint(1, 5, (10,10))
+```
+
+3. Faites la somme des lignes puis des colonnes qui contiennent au moins un 1.
+
+4. Reprenez le tableax m et faite la somme de chaque colonne que vous placerez dans un tuple.
+
+5. Même consigne mais maintenant pour les lignes.
+
+
+6. Faites la somme des valeurs paires de la matrice.
+
+7. Faites la somme des valeurs paires des colonnes.
+
+8. Calculez la moyenne des valeurs et l'écart type.
+
+9. Créez un nouveau tableau à partir des valeurs paires de la matrice m
+
+
+### 10 Exercice multiple de 11 (**)
+
+Créez une fonction circular qui prend en paramètre un entier n et renvoie une matrice de taille n*n et calcule toutes les permutations circulaires du cycle de longueur n, voyez l'exemple ci-dessous :
+
+```python
+
+circular(10)
+
+"""
+[[ 1  2  3  4  5  6  7  8  9 10]
+ [ 2  3  4  5  6  7  8  9 10  1]
+ [ 3  4  5  6  7  8  9 10  1  2]
+ [ 4  5  6  7  8  9 10  1  2  3]
+ [ 5  6  7  8  9 10  1  2  3  4]
+ [ 6  7  8  9 10  1  2  3  4  5]
+ [ 7  8  9 10  1  2  3  4  5  6]
+ [ 8  9 10  1  2  3  4  5  6  7]
+ [ 9 10  1  2  3  4  5  6  7  8]
+ [10  1  2  3  4  5  6  7  8  9]]
+
+"""
+
+```
