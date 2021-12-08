@@ -23,18 +23,15 @@ dataNumbers = np.array(
 )
 
 w = [1, 2, 3, 4]
-
 def search_word(line):
-    for i in range(1+len(line) - len(w)):
-        # 
-        word = line[i:i+len(w)]
+    # 6, 1, 2, 3, 4, 5, 5, 3, 1, 3, 1, 2, 3, 4
+    # 14 - 4 + 1 = 10 + 1 = 11 range(11) 0 10
+    for i in range(1 + len(line) - len(w)):
         j = 0
-        for k, ch in enumerate(word):
-            if ch == w[k]:
-                j += 1
-
-        if j == len(word):
-            return i
+        while j < len(w) and line[i+j] == w[j]:
+            j+=1
+        if len(w) == j:
+            return i 
 
     return None
 
