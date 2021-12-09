@@ -27,12 +27,16 @@ print( m[ np.any(mask_one, axis=1) ].sum() )
 # si on voulait faire la somme que des lignes extraites
 # print(m[ np.any(mask_one, axis=1) ].sum(1))
 print('----')
-# colonne la matrice m.T est transposée les lignes deviennent les colonnes 
+# On peut également raisonner sur les lignes uniquement et pas les colonnes  
 print( m.T[ np.any(np.isin(m.T, 1), axis=1) ].sum() )
+
+# Comme axis transpose le mask par rapport aux colonnes on doit alors l'appliquer aux colonnes de la matrice 
+print( m.T[ np.any(np.isin(m, 1), axis=0) ].sum() )
+
 
 print('----')
 
-# Reprenez le tableax m et faite la somme de chaque colonne que vous placerez dans un tuple.
+# Reprenez le tableaux m et faite la somme de chaque colonne que vous placerez dans un tuple.
 print( tuple( m.sum(0) ) )
 
 # Même consigne mais maintenant pour les lignes.
