@@ -2,12 +2,17 @@
 
 Matplotlib permet de générer des graphiques dans l'univers Python.
 
-Pour créez des graphiques il existe deux méthodes : fonctionnelle ou objet.
+Pour créez des graphiques il existe deux méthodes : 
 
+- fonctionnelle  
+
+- objet
+
+Nous abordons dans ce chapitre l'approche fonctionnelle dans ce premier chapitre sur ce sujet.
 
 ## Approche fonctionnelle
 
-Pour tracer une courbe simple on utilise plot et show
+Pour tracer une courbe simple on utilise les foncitons plot et show
 
 ```python
 import matplotlib.pyplot as plt
@@ -16,22 +21,22 @@ plt.ylabel('some numbers')
 plt.show()
 ```
 
-la fonction plot permet de réunir des points qui seront pas la suite tracés sur un graphique.
+la fonction plot permet de réunir des points qui seront pas la suite tracés sur un graphique à l'aide de la méthode show.
 
 ```python
 plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
 ```
 
-Vous pouvez définir des valeurs pour les axes, notez l'option ro affichera des cercles rouges.
+Vous pouvez définir des valeurs pour des axes en 2D x et y, notez l'option **ro** affichera des cercles rouges, c'est une manière de styliser la courbe, il y en a beaucoup d'autres.
 
 ```python
 plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'ro')
-# définir des valeur pour les axes x et y respectivement
+# définir des valeur pour les axes x 0, 6 et y 0, 20 respectivement
 plt.axis([0, 6, 0, 20]) 
 plt.show()
 ```
 
-Vous pouvez également tracez plusieurs graphiques en même temps
+Vous pouvez également tracez plusieurs graphiques dans la même grille :
 
 ```python
 import numpy as np
@@ -47,23 +52,14 @@ plt.show();
 ## Définir l'environnement de travail
 
 ```python
-import matplotlib.pyplot as plt
 plt.style.use('seaborn-whitegrid');
 ```
 
-## Exemple tracer une fonction
-
-```python
-fig = plt.figure()
-ax = plt.axes()
-```
-
-- fig est un conteneur, c'est un objet qui contient : axes, labels, données, ..
-
-Il faut importer également Numpy et tracer la fonction à l'aide de valeurs :
+### 01 Exemple complet de tracé de la fonction sinus
 
 ```python
 import numpy as np
+import matplotlib.pyplot as plt
 
 fig = plt.figure()
 ax = plt.axes()
@@ -72,65 +68,53 @@ x = np.linspace(0, 10, 1_000)
 ax.plot(x, np.sin(x));
 ```
 
-Vous pouvez styliser un graphique 
+- On peut également améliorer le style de la fonction directement dans les arguments de la fonction plot.
 
 ```python
 plt.plot(x, np.sin(x - 1), color='blue', linestyle='solid', label='bleu')
 ```
 
-Définir également les limites des axes
+- Définir les labels et titre
 
 ```python
-plt.axis([-1, 11, -1.5, 1.5]);
-
-plt.axis([-1, 11, -1.5, 1.5]);
-
 # Label
 plt.title("Un exemple de graphe")
 # Placement de la légende
 plt.legend(loc='lower left');
 
-# Titres des axes
+# labels des axes
 ax = ax.set(xlabel='x', ylabel='sin(x)')
 ```
 
-## L'approche fonction : plot
+## L'objet figure
+
+Vous pouvez également invoquer l'objet figure (conteneur) sur lequel vous pouvez alors tracer des graphiques.
 
 ```python
-import matplotlib.pyplot as plt
-import numpy as np
-# meme dimension pour x et y 
- x = np.linspace(0,2, 10)
- y = x**2
-
-plt.plot(x, y);
-# plt.show()
+fig = plt.figure()
+ax = plt.axes()
 ```
 
-On peut également afficher un nuage de point avec la fonction scatter
+**fig** contient : axes, labels, données, ..
+
+Par exemple, vous pouvez définir la taille de la grille où sera dessiner votre figure 
 
 ```python
-plt.scatter(x, y);
-```
-
-- Pour le style on a beaucoup de possiblité
-
-c : couleur "red", "black"
-lw : épaisseur de ligne 
-ls : -- pour des tirets
-
-## Notion importante
-
-```python
-# figure définir la taille
 plt.figure(figsize=(12,8))
 ```
 
-On peut ajouter d'autres figures sur l'objet figure.
-
-On peut également ajouter un titre, des noms pour les axes :
+### 02 Exemple complet, on peut ajouter d'autres figures sur l'objet figure lui-même
 
 ```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# définit la taille
+plt.figure(figsize=(12,8))
+
+# définit un intervalle de valeurs entre 0 et 10 avec 1000 valeurs
+x = np.linspace(0, 10, 1_000)
+
 plt.plot(x, x**2, label="quadratique")
 plt.plot(x, x**3, label="cubique")
 
@@ -139,23 +123,21 @@ plt.xlabel('axe x')
 plt.ylabel('axe y')
 # légende il faut les définir dans la fonction plot avant
 plt.legend()
-plt.show()
-# sauvegarde de la figure 
-plt.savefig('f.png')
-```
 
-On peut également créer d'autres figures qui s'afficheront à la suite dans votre Notebook.
+# Puis on peut également définir un autre objet conteneur pour afficher à la suite un autre graphique
 
-```python
 plt.figure(figsize=(12,8))
 plt.plot(x, x**5)
+plt.show()
 ```
 
-## Plusieurs graphiques sur une même grille
+## Plusieurs graphiques dans une matrice de figure la fonction subplot
 
-Deux graphiques
+La fonction **subplot**, attention celle-ci n'a pas "s", il en existe une autre avec un "s" qui n'a pas le même sens (approche objet).
 
-subplot(nrows, ncols, index, **kwargs)
+Les arguments de cette fonction se comprennent facilement :
+
+**subplot(nrows, ncols, index, **kwargs)**
 
 ```python
 # création de la figure
@@ -167,81 +149,74 @@ plt.subplot(2,1,2)
 plt.plot(x, x**3, c="blue")
 ```
 
-## Méthode orienté 
+## Nuage de points
 
-Voici un exemple de l'approche objet, nous y reviendrons plus tard, l'approche fonctionnelle est pour l'instant suffisante pour les besoins de nos analyses de données.
-
-```python
-fig, ax = plt.subplots(2,1 sharex=True)
-ax[0].plot(x, x)
-ax[1].plot(x, x**2)
-plt.show()
-```
-
-## 01 Exercice plusieurs graphiques
-
-Soit le dataset suivant créez les graphiques de chaque valeurs aléatoire.
-
-```python
-dataset = {f"e{i}" : np.random.randn(100) for i range(3)  }
-```
-
-## Fleurs d'Iris de Fisher
-
-Nous allons travailler avec un dataset connu sur les fleurs d'Iris.
-
-Quatre caractéristiques ont été mesurées à partir de chaque échantillon : la longueur et la largeur des sépales et des pétales.
-
-Il y a 150 mesures pour 3 catégories de fleures d'Iris (target). Chaque Iris comporte 4 critères de mesure pour les sépales et pétales
-
-Import du dataset.
+La fonction **scatter** définira un nuage de points :
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.datasets import load_iris
 
-iris = load_iris()
+# définir une valeur de base sur laquel la fonction random créée des nombres pseudo aléatoire
+np.random.seed(19680801)
 
-# longueur/largeur des sépales et pétales
-x = iris.data
-y = iris.target
+N = 50
+x = np.random.rand(N)
+y = np.random.rand(N)
+colors = np.random.rand(N)
+area = (30 * np.random.rand(N))**2  # 0 to 15 point radii
+
+plt.scatter(x, y, s=area, c=colors, alpha=0.5)
+plt.show()
 ```
 
-## plt.scatter
+- Pour les styles on a beaucoup de possiblités, les paramètres suivants sont disponibles :
 
-On peut par exemple étudier la première variable et la deuxième variable : longueur et largeur du premier critère sépale.
+c : couleur "red", "black"
+lw : épaisseur de ligne 
+ls : -- pour des tirets
+alpha : définir l'opacité des disques.
+
+## 03 Exemple diagramme en secteur la fonction pie
 
 ```python
+import matplotlib.pyplot as plt
 
-plt.scatter(x[:,0], x[:,1])
+# Pie chart, where the slices will be ordered and plotted counter-clockwise:
+labels = 'Frogs', 'Hogs', 'Dogs', 'Logs'
+x = [15, 30, 45, 10]
 
+# séparer les secteurs
+explode = (0, 0.1, 0, 0)  
+
+plt.pie(x, explode=explode, labels=labels, autopct='%1.1f%%',
+        shadow=True, startangle=90)
+plt.title('Circle') 
+
+plt.show()
 ```
 
-Et vous pouvez également préciser la target (3 critères) en troisième paramètre. Si on ajoute s pour la taille on peut définir des points qui seront fonction de la taille de la longueur du pétale. Les disques seront proportionnels à leurs longueurs.
+Les paramètres de la fonction pie
+
+- explode permet de séparer les secteurs
+
+- autopct afficher les pourcentages sur les secteurs
+
+- shadow met une ombre portée
+
+- startangle permet de faire une rotation de la présentation des secteurs
+
+<img src="images/circle.png" width="300">
+
+
+### 04 Exemple bar pour tracer des histogrammes simples
 
 ```python
-plt.scatter(x[:,0], x[:,1], c=y, alpha=0.8, s=x[:,2]*100)
-plt.xlabel("Longueur sépale")
-plt.ylabel("largeur sépale")
-```
+import matplotlib.pyplot as plt
+fig = plt.figure()
 
-
-## Diagramme avec des variables catégorielles
-
-
-```python
-names = ['group_a', 'group_b', 'group_c']
-values = [1, 10, 100]
-
-plt.figure(figsize=(9, 3))
-
-plt.subplot(131)
-plt.bar(names, values)
-plt.subplot(132)
-plt.scatter(names, values)
-plt.subplot(133)
-plt.plot(names, values)
-plt.suptitle('Categorical Plotting')
+langs = ['C', 'C++', 'Java', 'Python', 'PHP']
+students = [23,17,35,29,12]
+plt.bar(langs,students, 0.5, color='r')
 plt.show()
 ```
