@@ -19,7 +19,7 @@ print(iris.keys())
 
 3. Calculez la moyenne des longueurs des pétales, puis des sépales de toutes les fleures. Puis, refaite ce calcul par catégorie de fleurs.
 
-4. Trouvez la fleur qui a la plus longue (en largeur) pétale, puis la plus grande surface.
+4. Trouvez la fleur qui a la plus longue (en longueur) pétale, puis la plus grande surface (longueur x largeur).
 
 Pour la suite utilisez la méthode plt.hist de Matplotlib.
 
