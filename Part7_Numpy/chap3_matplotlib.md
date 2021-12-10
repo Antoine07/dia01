@@ -177,6 +177,42 @@ lw : épaisseur de ligne
 ls : -- pour des tirets
 alpha : définir l'opacité des disques.
 
+
+### Exemples avec le datasets Iris
+
+Avec les légendes en plus ... Merci à Daniel
+
+```python
+import numpy as np
+from sklearn import datasets
+
+import matplotlib.pyplot as plt
+
+# Datasets
+iris = datasets.load_iris()
+
+fig = plt.figure(figsize=(10, 8))
+
+colors = ['b', 'c', 'y']
+setosa = plt.scatter(
+    iris.data[:,0][iris.target == 0], iris.data[:,1][iris.target == 0], color=colors[0],
+    s = iris.data[:,2][iris.target == 0]*100, alpha=0.5
+)
+versicolor = plt.scatter(iris.data[:,0][iris.target == 1], iris.data[:,1][iris.target == 1], color=colors[1],
+                         s = iris.data[:,2][iris.target == 1]*100, alpha=0.5
+                        )
+virginica  = plt.scatter(iris.data[:,0][iris.target == 2], iris.data[:,1][iris.target == 2], color=colors[2],
+                         s = iris.data[:,2][iris.target == 2]*100, alpha=0.5
+                        )
+
+plt.legend((setosa, versicolor, virginica),
+           (iris.target_names[0], iris.target_names[1], iris.target_names[2]),
+           scatterpoints=1,
+           loc='upper right',
+           fontsize=12);
+```
+
+
 ## 03 Exemple diagramme en secteur la fonction pie
 
 ```python
