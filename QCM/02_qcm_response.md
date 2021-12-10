@@ -9,7 +9,7 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 _Réponses_ :
 
 - [ ] Ndarray.
-- [ ] Ndarray, indexation avancée, vectorisation et le broadcasting.
+- [X] Ndarray, indexation avancée, vectorisation et le broadcasting.
 - [ ] indexation avancée, vectorisation et le broadcasting.
 - [ ] Ndarray et le broadcasting
 
@@ -30,7 +30,7 @@ _Réponses_ :
 
 - [ ] Oui l'assignation de la valeur 1. se fait à l'indice 10.
 - [ ] Non l'assignation ne se fait pas à l'indice 10, car 1. n'a pas le bon type.
-- [ ] Non l'assignation ne se fait pas à l'indice 10, car le tableau n'a pas d'indice 10.
+- [X] Non l'assignation ne se fait pas à l'indice 10, car le tableau n'a pas d'indice 10.
 - [ ] Non l'assignation ne se fait pas à l'indice 10, car les valeurs d'empty sont des valeurs constantes.
 
 ## Question 3
@@ -43,13 +43,15 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 import numpy as np
 
 m = np.array( [ [[1,2,3]], [[4,5,6]] , [[7,8,9]]])
+
+print(m.shape)
 ```
 
 _Réponses_ :
 
 - [ ] (1, 1, 3)
 - [ ] (3, 3, 3)
-- [ ] (3, 1, 3)
+- [X] (3, 1, 3)
 - [ ] (3, 1, 1)
 
 ## Question 4
@@ -72,7 +74,7 @@ _Réponses_ :
 
 - [ ] . (a % 11 ).sum()
 - [ ] . (a % 11 == 0).sum()
-- [ ] . a[(a % 11 == 0)].sum()
+- [X] . a[(a % 11 == 0)].sum()
 - [ ] . (a  // 11 == 0 ).sum()
 
 ## Question 5
@@ -91,7 +93,7 @@ _Réponses_ :
 
 - [ ] (m % 2 == 1).sum(0)
 - [ ] (m.T % 2 == 1).sum(0)
-- [ ] (m % 2 == 0).sum(0)
+- [X] (m % 2 == 0).sum(0)
 - [ ] (m % 2 == 1).T.sum(0)
 
 ## Question 6
@@ -110,7 +112,7 @@ _Réponses_ :
 
 - [ ] m[(m % 2) == 0].sum()
 - [ ] m.T[(m.T % 2) == 0].sum()
-- [ ] np.where( m % 2 == 0, m , 0 ).sum(0)
+- [X] np.where( m % 2 == 0, m , 0 ).sum(0) 
 
 ## Question 7
 
@@ -125,7 +127,7 @@ X = np.array([1,2,3])
 
 _Réponses_ :
 
-- [ ] d = np.sqrt( ((a - x)**2).sum(1) )
+- [X] d = np.sqrt( ((a - x)**2).sum(1) )
 - [ ] d = np.sqrt( ((a - x)**2).sum(0) )
 - [ ] d = np.sqrt( ((a - x)**2).sum() )
 
@@ -150,7 +152,7 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 _Réponses_ :
 
 - [ ] La méthode 1, car les compréhensions de liste sont trés optimisées en Python.
-- [ ] La méthode 2, car la vectorisation en Numpy est plus rapide.
+- [X] La méthode 2, car la vectorisation en Numpy est plus rapide.
 - [ ] Il n'y a aucune différence entre ces deux approches, en terme de rapidité d'exécution.
 
 ## Question 9
@@ -162,8 +164,8 @@ Répondez en choisissant une ou des réponses.
 _Réponses_ :
 
 - [ ] Lorsque les modalités (ou les valeurs) qu'elle prend sont désignées par des quantités discrètes. 
-- [ ] Lorsque les modalités (ou les valeurs) qu'elle prend sont désignées par des noms. 
-- [ ] Lorsque les modalités (ou les valeurs) qu'elle prend sont désignées par des valeurs M ou F. 
+- [X] Lorsque les modalités (ou les valeurs) qu'elle prend sont désignées par des noms. 
+- [X] Lorsque les modalités (ou les valeurs) qu'elle prend sont désignées par des valeurs M ou F. 
 - [ ] Lorsque les modalités (ou les valeurs) qu'elle prend sont désignées par des quantités continues. 
 
 ## Question 10
@@ -174,7 +176,7 @@ Répondez en choisissant une ou des réponses.
 
 _Réponses_ :
 
-- [ ] Lorsque les modalités (ou les valeurs) qu'elle prend sont désignées par des quantités discrètes. 
+- [X] Lorsque les modalités (ou les valeurs) qu'elle prend sont désignées par des quantités discrètes. 
 - [ ] Lorsque les modalités (ou les valeurs) qu'elle prend sont désignées par des noms. 
 - [ ] Lorsque les modalités (ou les valeurs) qu'elle prend sont désignées par des valeurs M ou F. 
-- [ ] Lorsque les modalités (ou les valeurs) qu'elle prend sont désignées par des quantités continues. 
+- [X] Lorsque les modalités (ou les valeurs) qu'elle prend sont désignées par des quantités continues. 
