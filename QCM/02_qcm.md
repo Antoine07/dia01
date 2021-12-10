@@ -157,7 +157,7 @@ _Réponses_ :
 
 Comment définissez-vous une variable qualitative ? 
 
-Répondez en choisissant une seule et bonne réponse ci-dessous.
+Répondez en choisissant une ou des réponses.
 
 _Réponses_ :
 
@@ -170,7 +170,7 @@ _Réponses_ :
 
 Comment définissez-vous une variable quantitative ? 
 
-Répondez en choisissant une seule et bonne réponse ci-dessous.
+Répondez en choisissant une ou des réponses.
 
 _Réponses_ :
 
