@@ -42,7 +42,7 @@ def bernouilli(p):
 
 Si on prend l'expérience suivante : on lance successivement 10 fois une pièce de monnaie parfaitement équilibrée. Quelle est la probabilité d'obtenir 3 piles sur ces 10 lancers ?
 
-2. Créez une fonction **experience(n,p)** qui permet de simuler un lancer de dé à l'aide de la fonction bernoulli.
+2. Créez une fonction **experience(n,p)** qui permet de simuler un lancer de pièce à l'aide de la fonction bernoulli.
 
 3. Répétez un grand nombre de fois l'expérience décrite ci-dessus et comptez alors le nombre de fois que l'on obtient une combinaison de 3 piles parmi 10 lancers :
 
