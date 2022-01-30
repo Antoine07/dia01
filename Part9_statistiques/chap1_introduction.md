@@ -226,7 +226,7 @@ Une boîte à moustache aide à se représenter les données. Notons que 50% des
 
 Ce diagramme est très utilisé **principalement** pour comparer un même caractère dans deux populations de tailles différentes.
 
-![diagramme moustache](images/box_plot.png)
+<img src="images/box_plot.png" width="500">
 
 Notez que les valeurs extèmes n'apportent en elle-même pas d'information particulière pour l'étude d'un critère donné.
 
