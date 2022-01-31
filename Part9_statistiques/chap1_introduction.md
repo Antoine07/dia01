@@ -209,7 +209,7 @@ quartile ; il s’écrit : $II = Q_3 - Q_1$.*
 
 ## 06 Exercice Quartile notes
 
-Si la valeur n'est pas entière dans le calcul on prendra la valeur supérieur (convention française). Pour le calcul de la médiane il se fait, si la série est de longueur paire, en prenant la position donnée par le calcul on prend cette valeur et la valeur qui suit et on fait la moyenne des deux.
+Si la valeur n'est pas entière dans le calcul on prendra la valeur supérieur (convention française). Pour le calcul de la médiane il se fait, si la série est de longueur paire, en prenant la position donnée par le calcul et en prennant la valeur qui suit et en faisant la moyenne de ces deux valeurs.
 
  Soit la série suivantes : 10; 25; 30; 40; 41; 42; 50; 55; 70; 101; 110; 111
 
