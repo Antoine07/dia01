@@ -184,13 +184,6 @@ Ces objets sont des **indicateurs de position** en statistiques. Au même titre 
 
 La médiane (notée Me ) d'une variable quantitative est la valeur de cette variable qui permet de scinder la population étudiée en deux sous-populations de même effectif.
 
-## 05 Exercice Quartile Définition (correction ci-après)
-
-En reprenant la définition d'un quantile ci-dessus essayez de décrire ce qu'est un quartile.
-
-## Correction
-
-Les quartiles de X sont ses trois quantiles $x_{0,25} , x_{0,5} et x_{0,75}$. $Q_1 = x_{0,25}$ , s’appelle le premier quartile; un quart des valeurs prises par X sont inférieures ou égales à $Q_1$ . $Q_2$ = $x_{0,5}= Me$ est la médiane. $Q_3$ = $x_{0,75}$ s'appelle le troisième quartile; un quart des valeurs prises par X sont supérieures ou égales à $Q_3$.
 
 ## Définition de l'intervalle interquartile
 
