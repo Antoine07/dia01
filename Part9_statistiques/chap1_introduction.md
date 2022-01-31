@@ -131,7 +131,7 @@ Récupérez le dataset **note_statistiques.csv** et faite un diagramme en baton 
 *Remarques pour effectuez un diagramme de type Histogramme vous pouvez également partir du DataFrame lui-même voyez l'exemple suivant*
 
 ```python
-classNotes[['Effectifs']].plot(kind='bar');
+classNotes['Effectifs'].plot(kind='bar');
 ```
 
 ## Valeurs centrales
@@ -184,27 +184,32 @@ Ces objets sont des **indicateurs de position** en statistiques. Au même titre 
 
 La médiane (notée Me ) d'une variable quantitative est la valeur de cette variable qui permet de scinder la population étudiée en deux sous-populations de même effectif.
 
-La notion de quantile d'ordre $\alpha$ ($0 \leq \alpha \leq 1$), encore appelée fractile d'ordre $\alpha$, généralise la notion de médiane. Le quantile d'ordre $\alpha$ d'une variable quantitative X, est la valeur $X_{\alpha}$ de cette variable qui permet de scinder la population étudiée en deux sous-populations dont les effectifs respectifs sont égaux à $\alpha$ et 1 − $\alpha$ de l'effectif de la population initiale.
-
-## 05 Exercice Quartile Définition (correction ci-après)
-
-En reprenant la définition d'un quantile ci-dessus essayez de décrire ce qu'est un quartile.
-
-## Correction
-
-Les quartiles de X sont ses trois quantiles $x_{0,25} , x_{0,5} et x_{0,75}$. $Q_1 = x_{0,25}$ , s’appelle le premier quartile; un quart des valeurs prises par X sont inférieures ou égales à $Q_1$ . $Q_2$ = $x_{0,5}= Me$ est la médiane. $Q_3$ = $x_{0,75}$ s'appelle le troisième quartile; un quart des valeurs prises par X sont supérieures ou égales à $Q_3$.
 
 ## Définition de l'intervalle interquartile
 
-Rappelons que l'on appelle quartiles les 3 valeurs de la variables qui partagent l'effectif, rangé par ordre croissant, en quatre sous-ensembles égaux : Q1, Q2, Q3.
+### Rappels sur Q1, Q2, Q3
 
-C'est la différence entre le troisième quartile et le premier
-quartile ; il s’écrit : $II = Q_3 - Q_1$.
+On appelle quartiles **les 3 valeurs** de la variables qui partagent l'effectif, rangé par ordre croissant, en quatre sous-ensembles égaux : Q1, Q2, Q3.
 
+Q1 : premier quartile 25% des valeurs sont inférieurs à Q1
+
+Q2 : mediane 50% des valeurs sont inférieurs à Q2.
+
+Q3 : troisième quartile 75% des valeurs sont inférieurs à Q3
+
+Min : la plus petite valeur.
+
+Max : la plus valeur valeur.
+
+
+### Définition interquartile
+
+*C'est la différence entre le troisième quartile et le premier
+quartile ; il s’écrit : $II = Q_3 - Q_1$.*
 
 ## 06 Exercice Quartile notes
 
-Si la valeur n'est pas entière dans le calcul on prendra la valeur supérieur (convention française). Pour le calcul de la médiane il se fait, si la série est de longueur paire, en prenant la position donnée par le calcul on prend cette valeur et la valeur qui suit et on fait la moyenne des deux.
+Si la valeur n'est pas entière dans le calcul on prendra la valeur supérieur (convention française). Pour le calcul de la médiane il se fait, si la série est de longueur paire, en prenant la position donnée par le calcul et en prennant la valeur qui suit et en faisant la moyenne de ces deux valeurs.
 
  Soit la série suivantes : 10; 25; 30; 40; 41; 42; 50; 55; 70; 101; 110; 111
 
