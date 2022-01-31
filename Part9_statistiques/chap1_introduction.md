@@ -131,7 +131,7 @@ Récupérez le dataset **note_statistiques.csv** et faite un diagramme en baton 
 *Remarques pour effectuez un diagramme de type Histogramme vous pouvez également partir du DataFrame lui-même voyez l'exemple suivant*
 
 ```python
-classNotes[['Effectifs']].plot(kind='bar');
+classNotes['Effectifs'].plot(kind='bar');
 ```
 
 ## Valeurs centrales
