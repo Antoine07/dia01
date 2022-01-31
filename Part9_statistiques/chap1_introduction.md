@@ -98,9 +98,9 @@ Elle se calcule relativement par rapport à une sous population, par exemple dan
 
 1. si on prend la table croisé du nombre de pourboires pour les 2.5 mois par rapport au critère sex et smoker, on aimerait avoir les fréquences conditionnelles suivantes :
 
-- Fréquence des fumeurs parmi les femmes, puis les hommes.
+- Fréquence des fumeurs parmi les femmes, puis les hommes qui ont donné un pourboire.
 
-- Fréquence des non fumeurs parmi les femmes, puis les hommes.
+- Fréquence des non fumeurs parmi les femmes, puis les hommes qui ont donné un pourboire.
 
 2. Créez des diagrammes circulaires représentant ces fréquences 
 
