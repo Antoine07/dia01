@@ -187,7 +187,9 @@ La médiane (notée Me ) d'une variable quantitative est la valeur de cette vari
 
 ## Définition de l'intervalle interquartile
 
-Rappelons que l'on appelle quartiles les 3 valeurs de la variables qui partagent l'effectif, rangé par ordre croissant, en quatre sous-ensembles égaux : Q1, Q2, Q3.
+### Rappels sur Q1, Q2, Q3
+
+On appelle quartiles **les 3 valeurs** de la variables qui partagent l'effectif, rangé par ordre croissant, en quatre sous-ensembles égaux : Q1, Q2, Q3.
 
 Q1 : premier quartile 25% des valeurs sont inférieurs à Q1
 
@@ -199,9 +201,11 @@ Min : la plus petite valeur.
 
 Max : la plus valeur valeur.
 
-C'est la différence entre le troisième quartile et le premier
-quartile ; il s’écrit : $II = Q_3 - Q_1$.
 
+### Définition interquartile
+
+*C'est la différence entre le troisième quartile et le premier
+quartile ; il s’écrit : $II = Q_3 - Q_1$.*
 
 ## 06 Exercice Quartile notes
 
