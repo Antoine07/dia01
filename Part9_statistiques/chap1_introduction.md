@@ -269,7 +269,7 @@ Utilisez la méthode boxplot de Seaborn :
 # x et y sont des variables (colonnes) de votre DataFrame
 # kind indique le type de graphique que vous souhaitez utiliser, ici box pour les diagrammes en moustache
 # data représente le jeu de données
-ax = sns.boxplot(x="Name_variable1", y="Name_variable2", kind="box", data=MyDataFrame)
+ax = sns.boxplot(x="Name_variable1", y="Name_variable2", data=MyDataFrame)
 plt.show()
 ```
 
