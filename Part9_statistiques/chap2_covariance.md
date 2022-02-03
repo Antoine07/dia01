@@ -226,13 +226,33 @@ Vous pouvez également ajouter le nombre de passager sur le graphique :
 
 ```python
 plt.figure(figsize=(15, 10))
-ax = sns.heatmap(flights,annot=True, fmt="d")
+ax = sns.heatmap(flights,annot=True, fmt=".0f", cmap="YlGnBu")
 ```
+
+Le paramètre cmap indique la plage de couleur.
+
+pour plus de précision sur la répartition de ces couleurs utilisez vmin et vmax entre les valeurs possibles de vos données.
+
+Le paramètre fmt indique la taille de la typo dans les cellules du heatmap.
 
 ![heatmap](images/heatmap_01.png)
 
 
-### 05 Exercice interprétation
+### 05 Exercice mpg 
+
+Importez les données mpg de searborn dans votre Notebook
+
+- 1. Combien de voiture sont-elles produites pour chaque région.
+
+- 2. Représentez les données à l'aide d'un heatmap.
+
+Nous aimerions avoir un heatmap de la forme suivante :
+
+<img src="./images/heatmap_cars.png" width="500" />
+
+- 3. Représentez le diagramme des corrélations du dataset mpg
+
+### 06 Exercice interprétation
 
 Comment interprétez-vous le graphique suivant où on met en évidence les coefficients de corrélation pour les V.A. passanger et year ?
 
@@ -252,6 +272,8 @@ sns.lmplot(x="year", y="passengers", data=flights);
 
 ## Droite de régression
 
+**Voir dans le dossier Examples de Notebooks le fichier Droite_regression.**
+
 Rechercher une droite de régression linéaire, c'est rechercher une relation linéaire entre les variables X et Y. Dis autrement c'est rechercher une relation d'explication linéaire de Y par X. Par exemple on pourrait essayer d'expliquer l'espérance de vie Y en fonction de la natalité X avec un jeu de données correspodant.
 
 On cherche à miniser la somme des distances en bleu ci-dessous. Ce sont les projections des points sur la droite D recherchée. Cette droite passe par un point remarquable qui est le centre de gravité du nuage de points noté G et qui a pour coordonnées la moyenne des X et Y (nos variables) : G(avg{X}, avg{Y})
@@ -265,3 +287,37 @@ On cherche ici une relation affine entre nos deux variables X et Y. On démontre
 De plus on sait que cette droite passe par le centre de gravité du nuage de points. On a donc deux relations permettant de calculer les deux paramètres a et b et donc de déterminer l'équation de la droite (D) de régression.
 
 ![regression linéaire](images/regression_lineaire_01.png)
+
+
+## Droite de régression seaborn
+
+Importez le dataset diamonds de seaborn
+
+```python
+%matplotlib inline
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+diamonds = sns.load_data('diamonds')
+
+diamonds.head()
+```
+
+Pour avoir une expression de la droite de régression nous devons utiliser une autre librairie (statistiques) :
+
+```python
+import statsmodels.api as sm
+```
+
+Puis définir quelques variables pour obtenir ce que nous recherchons :
+
+```python
+def fit_line(x, y):
+    """Return slope, intercept of best fit line."""
+    X = sm.add_constant(x)
+    model = sm.OLS(y, X, missing='drop') # ignoré les NaN
+    fit = model.fit()
+
+    return fit.params[1], fit.params[0] 
+```
+
