@@ -4,6 +4,8 @@ Vous allez mettre en place une petite application pour afficher votre analyse de
 
 Vous êtes libre d'analyser le dataset de votre choix.
 
+Vous avez 6 semaines avant de rendre votre étude.
+
 ## Contraintes & remarques
 
 - Utilisez Pandas, de la dataviz, ...
