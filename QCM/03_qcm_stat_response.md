@@ -68,16 +68,16 @@ Comment interprétez-vous l'interquatile de la série statistique suivante, voir
 | nombre match| 7  | 17  | 13 | 14 | 8  | 6 | 0 | 1 |
 
 ```txt
-Q3 - Q1 = 2
+I = Q3 - Q1 = 2
 ```
 
 Répondez en choisissant une seule et bonne réponse ci-dessous.
 
-- [ ]  On a au moins 75% des valeurs de la série qui sont séparées au plus séparées de 2 buts
+- [ ]  On a au moins 75% dans l'intervalle I des valeurs de la série qui sont séparées d'au plus de 2 buts.
 
-- [X]  On a au moins 50% des valeurs de la série qui sont séparées au plus séparées de 2 buts
+- [X]  On a au moins 50% dans l'intervalle I des valeurs de la série qui sont séparées d'au plus de 2 buts.
 
-- [ ]  On a au moins 25% des valeurs de la série qui sont séparées au plus séparées de 2 buts
+- [ ]  On a au moins 25% dans l'intervalle I des valeurs de la série qui sont séparées d'au plus de 2 buts.
 
 - [ ]  On peut espérer pour n'importe quel match marquer 2 buts.
 
@@ -149,7 +149,7 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 
 - [ ]  Pandas lance une erreur et s'arrête.
 
-- [X]  Pandas ignore les colonnes sur lesquelles il ne peut pas faire de calcul.
+- [X]  Pandas ignore les colonnes sur lesquelles il ne peut pas faire le calcul.
 
 - [ ]  Pandas met la valeur 0 dans les colonnes catégorielles.
 
@@ -158,19 +158,46 @@ Répondez en choisissant une seule et bonne réponse ci-dessous.
 Déterminez le premier et le troisième quartile de la série statistique suivante, vous pouvez faire les calculs à la main.
 
 ```txt
-ser = [ 2, 5, 6, 7, 7, 9, 12, 16, 22, 45 , 90, 100 ]
+ser = [ 2, 5, 6,   7, 7, 9,   12, 16, 22,    45 , 90, 100 ]
+
+12/4 = 3
+12*3/4 = 9
 
 ```
 
 Répondez en choisissant une seule et bonne réponse ci-dessous.
 
-- [ ]  7 45
+- [ ]  7, 45
 
-- [ ]  2 45
+- [ ]  2, 45
 
-- [X]  6 22
+- [X]  6, 22
 
-- [ ]  6  45
+- [ ]  6,  45
+
+
+
+## Question 8 bis
+
+Déterminez le premier et le troisième quartile de la série statistique suivante, vous pouvez faire les calculs à la main.
+
+```txt
+ser = [ 2, 5, 6, 7, 7, 9, 12, 16, 22, 45 , 90, 100 , 200]
+
+
+
+```
+
+Répondez en choisissant une seule et bonne réponse ci-dessous.
+
+- [X]  7, 45
+
+- [ ]  2, 45
+
+- [ ]  6, 22
+
+- [ ]  6,  45
+
 
 ## Question 9
 
@@ -179,13 +206,13 @@ Soit la variable statistique Sex d'un individu, définissez son type.
 Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 
-- [X] Variable qualitative nominale
+- [X] Variable qualitative nominale.
 
-- [ ] Variable qualitative ordinale
+- [ ] Variable qualitative ordinale.
 
-- [ ] Variable quantitative discrète
+- [ ] Variable quantitative discrète.
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue.
 
 
 ## Question 10
@@ -195,13 +222,13 @@ Soit la variable statistique nombre d'enfants, définissez son type.
 Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 
-- [ ] Variable qualitative nominale
+- [ ] Variable qualitative nominale.
 
-- [ ] Variable qualitative ordinale
+- [ ] Variable qualitative ordinale.
 
-- [X] Variable quantitative discrète
+- [X] Variable quantitative discrète.
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue.
 
 ## Question 11
 
@@ -210,13 +237,13 @@ Soit la variable statistique taille d'un individu, définissez son type.
 Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 
-- [ ] Variable qualitative nominale
+- [ ] Variable qualitative nominale.
 
-- [ ] Variable qualitative ordinale
+- [ ] Variable qualitative ordinale.
 
-- [ ] Variable quantitative discrète
+- [ ] Variable quantitative discrète.
 
-- [X] Variable qualitative continue
+- [X] Variable quantitative continue.
 
 
 ## Question 12
@@ -226,13 +253,13 @@ Soit la variable statistique nationalité d'un individu, définissez son type.
 Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 
-- [X] Variable qualitative nominale
+- [X] Variable qualitative nominale.
 
-- [ ] Variable qualitative ordinale
+- [ ] Variable qualitative ordinale.
 
-- [ ] Variable quantitative discrète
+- [ ] Variable quantitative discrète.
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue.
 
 
 ## Question 13
@@ -242,13 +269,13 @@ Soit la variable statistique mention d'un examen d'un individu, définissez son 
 Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 
-- [ ] Variable qualitative nominale
+- [ ] Variable qualitative nominale.
 
-- [X] Variable qualitative ordinale
+- [X] Variable qualitative ordinale.
 
-- [ ] Variable quantitative discrète
+- [ ] Variable quantitative discrète.
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue.
 
 ## Question 14
 
@@ -257,13 +284,13 @@ Soit la variable statistique couleur des yeux  d'un individu, définissez son ty
 Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 
-- [X] Variable qualitative nominale
+- [X] Variable qualitative nominale.
 
-- [ ] Variable qualitative ordinale
+- [ ] Variable qualitative ordinale.
 
-- [ ] Variable quantitative discrète
+- [ ] Variable quantitative discrète.
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue.
 
 
 ## Question 15
@@ -273,18 +300,18 @@ Soit la variable statistique nombre de bonnes réponses à un QCM, définissez s
 Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 
-- [ ] Variable qualitative nominale
+- [ ] Variable qualitative nominale.
 
-- [ ] Variable qualitative ordinale
+- [ ] Variable qualitative ordinale.
 
-- [X] Variable quantitative discrète
+- [X] Variable quantitative discrète.
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue.
 
 
 ## Question 16
 
-Calculez la fréquence conditionnelle des personnes dont le sang est de rhésus positif parmi les personnes de groupe sanguin A.
+Calculez la fréquence conditionnelle des personnes dont le sang est de rhésus positif, parmi les personnes de groupe sanguin A.
 
 
               A        B      AB     O
@@ -307,7 +334,7 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 ## Question 16
 
-Calculez la fréquence conditionnelle des personnes dont le sang est de rhésus négatif parmi les personnes de groupe sanguin B.
+Calculez la fréquence conditionnelle des personnes dont le sang est de rhésus négatif, parmi les personnes de groupe sanguin B.
 
 
               A        B      AB     O
@@ -321,16 +348,16 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [ ] Frh-B = 200/3700
 
-- [ ] Frh-B = 200/1000
+- [X] Frh-B = 200/1000
 
-- [X] Frh-B = 1000/800
+- [ ] Frh-B = 1000/800
 
 - [ ] Frh-B = 800/7200
 
 
 ## Question 17
 
-Calculez la fréquence conditionnelle des personnes dont le sang est de rhésus négatif parmi les personnes de groupe sanguin AB.
+Calculez la fréquence conditionnelle des personnes dont le sang est de rhésus négatif, parmi les personnes de groupe sanguin AB.
 
 
               A        B      AB     O
@@ -389,7 +416,7 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [ ] Le nombre de survivants par sex sans les totaux marginaux.
 
-- [ ] Le nombre de survivants par sex avec les totaux marginaux.
+- [X] Le nombre de survivants par sex avec les totaux marginaux.
 
 - [ ] Le nombre de survivants sans les totaux marginaux.
 
@@ -428,22 +455,21 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 ## Question 22
 
-La moyenne type est selon vous un indicateur de quel type ? 
-
+La moyenne est selon vous un indicateur de quel type ? 
 
 Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 
 - [X] De position.
 
-- [ ] De dispertion.
+- [ ] De dispersion.
 
 - [ ] De bruit de fond.
 
 
 ## Question 23
 
-La médiane type est selon vous un indicateur de quel type ? 
+La médiane est selon vous un indicateur de quel type ? 
 
 
 Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
@@ -451,7 +477,7 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [X] De position.
 
-- [ ] De dispertion.
+- [ ] De dispersion.
 
 - [ ] De bruit de fond.
 
@@ -487,9 +513,9 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [ ] Une forte corrélation entre X et Y positive.
 
-- [ ] Une faible corrélation entre X et Y négative.
+- [X] Une faible corrélation entre X et Y négative.
 
-- [ ] Une indépandence total entre X et Y.
+- [ ] Une indépendance total entre X et Y.
 
 ## Question 26
 
@@ -509,7 +535,7 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [ ] Une faible corrélation entre X et Y négative.
 
-- [ ] Une indépandence total entre X et Y.
+- [ ] Une indépendance total entre X et Y.
 
 ## Question 28
 
@@ -529,7 +555,7 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [ ] Une faible corrélation entre X et Y négative.
 
-- [ ] Une indépandence total entre X et Y.
+- [ ] Une indépendance total entre X et Y.
 
 
 ## Question 29
@@ -578,6 +604,7 @@ print(all_girls/3)
 
 ```python
 print(either_girl/all_girls)
+
 ```
 
 
