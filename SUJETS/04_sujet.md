@@ -1,8 +1,24 @@
 # 04 Sujet
 
-Nous allons mettre en place une petite application pour afficher les résultats d'une analyse de données à l'aide de Flask.
+Vous allez mettre en place une petite application pour afficher votre analyse de données à l'aide de Flask.
 
-Vous êtes libre d'analyser le dataset de votre choix. Dans la suite du cours, on vous donne un exemple de mise en place d'une application Flask
+Vous êtes libre d'analyser le dataset de votre choix.
+
+## Contraintes & remarques
+
+- Utilisez Pandas, de la dataviz, ...
+
+- Utilisez Flask pour la partie application Web qui présentera votre travail.
+
+- Vous travaillez par équipe (2 à 3 personnes max).
+
+- L'application peut consommer une/des API(s) de données.
+
+- L'utilisation d'une base de données n'est pas exigée, vous pouvez cependant en utiliser (dans ce cas repportez vous sur les remarques plus bas pour la mettre en place ).
+
+- Vous devez avant de commencer votre développement résumer l'étude que vous souhaitez réaliser sur votre/vos datasets.
+
+- Votre travail devra être accessible sur un dépôt Git.
 
 ## Environement de travail
 
