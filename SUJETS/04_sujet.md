@@ -1,4 +1,4 @@
-# 04 Sujet
+# 04 Flask  & Etude d'un dataset 
 
 Vous allez mettre en place une petite application pour afficher votre analyse de données à l'aide de Flask.
 
