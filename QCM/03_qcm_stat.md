@@ -164,13 +164,13 @@ ser = [ 2, 5, 6, 7, 7, 9, 12, 16, 22, 45 , 90, 100 ]
 
 Répondez en choisissant une seule et bonne réponse ci-dessous.
 
-- [ ]  7 45
+- [ ]  7, 45
 
-- [ ]  2 45
+- [ ]  2, 45
 
-- [ ]  6 22
+- [ ]  6, 22
 
-- [ ]  6  45
+- [ ]  6 , 45
 
 ## Question 9
 
