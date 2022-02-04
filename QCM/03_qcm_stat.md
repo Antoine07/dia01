@@ -185,7 +185,7 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [ ] Variable quantitative discrète
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue
 
 
 ## Question 10
@@ -201,7 +201,7 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [ ] Variable quantitative discrète
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue
 
 ## Question 11
 
@@ -216,7 +216,7 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [ ] Variable quantitative discrète
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue
 
 
 ## Question 12
@@ -232,7 +232,7 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [ ] Variable quantitative discrète
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue
 
 
 ## Question 13
@@ -248,7 +248,7 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [ ] Variable quantitative discrète
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue
 
 ## Question 14
 
@@ -263,7 +263,7 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [ ] Variable quantitative discrète
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue
 
 
 ## Question 15
@@ -279,7 +279,7 @@ Répondez en choisissant une/des bonne(s) réponse(s) ci-dessous.
 
 - [ ] Variable quantitative discrète
 
-- [ ] Variable qualitative continue
+- [ ] Variable quantitative continue
 
 
 ## Question 16
