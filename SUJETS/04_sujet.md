@@ -6,6 +6,8 @@ Vous êtes libre d'analyser le dataset de votre choix.
 
 Vous avez 6 semaines avant de rendre votre étude.
 
+Le projet théoriquement ne doit pas vous prendre plus de 2 jours.
+
 ## Contraintes & remarques
 
 - Utilisez Pandas, de la dataviz, ...
