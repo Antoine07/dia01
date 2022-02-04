@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title> Data analyse </title>
+    <style>
+        .heading {
+            color: purple;
+        }
+    </style>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    {% if persons.any() %}
+        <h1>Survivants {{ count }}</h1>
+        <table>
+        {% for survived, sex, cl in persons %}
+            <tr>
+                <td>Sex : {{ sex }}</td>
+                <td>Class : {{ cl }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    {% endif %}
+</body>
+
+</html>
