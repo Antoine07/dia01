@@ -73,11 +73,11 @@ Q3 - Q1 = 2
 
 Répondez en choisissant une seule et bonne réponse ci-dessous.
 
-- [ ]  On a au moins 75% des valeurs de la série qui sont séparées au plus de 2 buts
+- [ ]  On a au moins 75% des valeurs de la série qui sont séparées d'au plus de 2 buts
 
-- [ ]  On a au moins 50% des valeurs de la série qui sont séparées au plus de 2 buts
+- [ ]  On a au moins 50% des valeurs de la série qui sont séparées d'au plus de 2 buts
 
-- [ ]  On a au moins 25% des valeurs de la série qui sont séparées au plus de 2 buts
+- [ ]  On a au moins 25% des valeurs de la série qui sont séparées d'au plus de 2 buts
 
 - [ ]  On peut espérer pour n'importe quel match marquer 2 buts.
 
