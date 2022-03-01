@@ -90,7 +90,7 @@ SET plane = 'A340'
 WHERE name in ('Yan', 'Yi');
 ```
 
-## Sous-requête corrélées avec l'opérateur EXIST
+## Sous-requête corrélées avec l'opérateur EXISTS
 
 Une sous-requête corrélée est une sous-requête qui contient une référence à une colonne qui est dans une requête différente.
 
@@ -99,8 +99,8 @@ Une sous-requête fait des appels en boucle, il faudra donc faire attention à s
 Très souvent la sous-requête corrélée est utiliser avec un test d'existance : opérateur EXIST :
 
 ```sql
-SELECT * FROM t1 WHERE column1 EXIST
-       (SELECT 1 FROM t2 WHERE t2.column2 = t1.column2);
+SELECT * FROM t1 WHERE  EXISTS
+       (SELECT 1 FROM t2 WHERE t2.column1 = t1.column2);
 ```
 
 ### 02 Exercice sous-requête correlée
