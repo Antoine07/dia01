@@ -15,7 +15,7 @@ ADD bonus DECIMAL(8,2) AFTER certificate;
 UPDATE `pilots` 
 SET `bonus` = (
     CASE 
-        WHEN certificate IN ('ct-1', 'ct-11', 'ct-12') THEN 1000.00
-        WHEN certificate IN ('ct-56') THEN 2000.00
-        ELSE 500.00
+        WHEN certificate IN ('ct-1', 'ct-11', 'ct-12') THEN 1000.0
+        WHEN certificate IN ('ct-56') THEN 2000.0
+        ELSE 500.0
     END);
