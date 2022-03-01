@@ -69,7 +69,7 @@ Trouvez toute(s) les/la compagnie(s) n'ayant pas de pilotes.
 
 - 6. Sélectionnez la longueur des noms des pilotes dont la longueur de leurs noms est inférieur à toutes les longueurs des noms de la compagny FRE1.
 
-- 7. Sélectionnez les coordonnées des compagnies dont le nombre d'heures de vol est inférieur à tous les nombres d'heures de vol (chaque heure de vol) des A380. Ajoutez la colonne plane et les données suivantes dans la table pilotes.
+- - 7. Sélectionnez les coordonnées des compagnies dont, chaque nombre d'heure de vol est inférieur à tous les nombres d'heures de vol des A380. Ajoutez la colonne plane et les données suivantes dans la table pilotes.
 
 ```sql
 
@@ -109,6 +109,7 @@ Ajoutez un champ last_name dans la table pilots.
 
 Et ajoutez les noms suivants
 
+``txt
 +--------+-----------+
 | name   | last_name |
 +--------+-----------+
@@ -122,6 +123,8 @@ Et ajoutez les noms suivants
 | Jhon   | chai      |
 | Pierre | chai      |
 +--------+-----------+
+
+```
 
 - 1. Sélectionnez les adresses compagnies qui n'ont pas de pilot en utilisant un sous-requête corrélée.
 
