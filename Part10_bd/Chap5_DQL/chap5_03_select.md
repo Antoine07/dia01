@@ -109,7 +109,7 @@ Ajoutez un champ last_name dans la table pilots.
 
 Et ajoutez les noms suivants
 
-``txt
+```txt
 +--------+-----------+
 | name   | last_name |
 +--------+-----------+
