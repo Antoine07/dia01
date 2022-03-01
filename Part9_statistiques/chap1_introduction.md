@@ -191,11 +191,11 @@ La médiane (notée Me ) d'une variable quantitative est la valeur de cette vari
 
 On appelle quartiles **les 3 valeurs** de la variables qui partagent l'effectif, rangé par ordre croissant, en quatre sous-ensembles égaux : Q1, Q2, Q3.
 
-Q1 : premier quartile 25% des valeurs sont inférieurs à Q1
+Q1 : premier quartile 25% des valeurs sont inférieurs ou égale à Q1
 
-Q2 : mediane 50% des valeurs sont inférieurs à Q2.
+Q2 : mediane 50% des valeurs sont inférieurs ou égale à Q2.
 
-Q3 : troisième quartile 75% des valeurs sont inférieurs à Q3
+Q3 : troisième quartile 75% des valeurs sont inférieurs ou égale à Q3
 
 Min : la plus petite valeur.
 
