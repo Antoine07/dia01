@@ -5,7 +5,7 @@ Rappelons qu'un INDEX est une structure supplémentaire créé par MySQL pour ga
 
 **FOREIGN KEY** clef étrangère (éventuellement composite) elle se réfère à un INDEX ou clef primaire. Attention, on doit utiliser le moteur **InnoDB**, MyISAM n'est pas relationnel (pas de clef étrangère).
 
-Elle permet de ne pas insérer de données qui n'auraient pas de sens dans les tables. **Elle permet l'intégrité des données**.
+Elle permet de ne pas insérer de données qui n'auraient pas de sens dans les tables. **Elle permet de garder dans un état dit cohérent les données**.
 
 Pour créer une clef étrangère on doit :
 
