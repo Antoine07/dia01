@@ -46,27 +46,33 @@ call set_data('ITA');
 
 DELIMITER $$
 
-DROP PROCEDURE IF EXISTS set_data$$
+DROP PROCEDURE IF EXISTS set_data $$
+DROP TABLE IF EXISTS comp_compagnies $$
+TRUNCATE TABLE sales $$
+
 CREATE PROCEDURE set_data()
 BEGIN
-  DECLARE i INT DEFAULT 1;
+  DECLARE i INT DEFAULT 0;
   DECLARE d DATE DEFAULT '1980-01-01';
-  DROP TABLE IF EXISTS comp_compagnies;
-  CREATE TEMPORARY TABLE comp_compagnies SELECT '1980-01-01' as c_at , comp, ROUND(RAND()*15 * 100000, 2 ) FROM compagnies;
-  TRUNCATE TABLE sales;
-  loop_data : LOOP
+  CREATE TEMPORARY TABLE comp_compagnies SELECT '1980-01-01' as c_at, comp, ROUND(RAND()*15*100000, 2) FROM compagnies;
 
-    IF (i =20*12) THEN
-        LEAVE loop_data;
-    END IF;
+  loop_data: LOOP
+  
+     IF (i=20 * 12) THEN
+         LEAVE loop_data ;
+     END IF ;
+     
+     INSERT INTO 
+     `sales` (created_at, compagny, profit) SELECT 
+     DATE_ADD(c_at, INTERVAL i MONTH), comp, ROUND(RAND()*15*100000, 2) 
+     FROM comp_compagnies ;
+     
+     SET i = i + 1 ;
 
-    INSERT INTO 
-    `sales` (created_at, compagny, profit) SELECT 
-     DATE_ADD(c_at, INTERVAL i MONTH) , comp, ROUND(RAND()*15 * 100000, 2 )
-     FROM comp_compagnies;
+  END LOOP ;
 
-    SET i = 1 + i;
-  END LOOP; 
-END$$
+END $$
 
 DELIMITER ;
+
+-- call set_data();
