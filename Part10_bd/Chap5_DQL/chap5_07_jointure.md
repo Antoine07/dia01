@@ -4,7 +4,7 @@
 
 Ajoutez la clé étrangère "lead_pl" dans la table pilots. Cette clé étrangère se référencera à la clé primaire de la même table.
 
-![relation lead_pilot](images/lead_pilot.png)
+![relation lead_pilot](../images/lead_pilot.png)
 
 Mettez à jour la table pilots sachant que Pierre est le chef pilote de Alan, Tom et Yi. Et que Jhon est le chef pilote de Sophie, Albert et Yam.
 

@@ -22,7 +22,7 @@ INNER JOIN B as t2
 ON t1.k=t2.k;
 ```
 
-![jointure interne](images/jointure_interne.png)
+![jointure interne](../images/jointure_interne.png)
 
 \newpage
 
@@ -35,13 +35,13 @@ Lorsqu'on extrait les données dans une jointure externe ce sont les données de
 Attention pas de FULL OUTER dans MySQL qui permet d'ignorer l'ordre entre les tables (subordonnée et dominante).
 
 
-![jointure left](images/jointure_left.png)
+![jointure left](../images/jointure_left.png)
 
 \newpage
 
 Jointure droite
 
-![jointure right](images/jointure_right.png)
+![jointure right](../images/jointure_right.png)
 
 ## Autres types de jointures
 
@@ -54,6 +54,6 @@ ON t1.k=t2.k
 WHERE t2.k IS NULL
 ```
 
-![jointure exclude right](images/jointure_exclude_r.png)
+![jointure exclude right](../images/jointure_exclude_r.png)
 
 Notez que l'on peut également exclure A uniquement.
