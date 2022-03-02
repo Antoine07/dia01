@@ -37,11 +37,23 @@ Attention pas de FULL OUTER dans MySQL qui permet d'ignorer l'ordre entre les ta
 
 ![jointure left](../images/jointure_left.png)
 
-\newpage
+```sql
+SELECT t1.title, t2.title
+FROM A as t1
+LEFT OUTER JOIN B as t2
+ON t1.k=t2.k;
+```
 
 Jointure droite
 
 ![jointure right](../images/jointure_right.png)
+
+```sql
+SELECT t1.title, t2.title
+FROM A as t1
+RIGHT OUTER JOIN B as t2
+ON t1.k=t2.k;
+```
 
 ## Autres types de jointures
 
