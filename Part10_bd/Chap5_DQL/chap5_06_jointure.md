@@ -24,7 +24,6 @@ ON t1.k=t2.k;
 
 ![jointure interne](../images/jointure_interne.png)
 
-\newpage
 
 ## La jointure externe (LEFT OUTER JOIN  ou RIGHT OUTER JOIN)
 
