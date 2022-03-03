@@ -55,7 +55,7 @@ CALL get_count(@n);
 SELECT @n;
 ```
 
-## Exercices
+## 01 Exercices
 
 1. Créez une procédure qui affiche la liste des noms pilotes.
 
@@ -79,7 +79,7 @@ SELECT @n;
 
 Voyez les indications en fin de documents
 
-## Exercice algo
+## 02 Exercice algo
 
 Créez une procédure afin de déterminer si on a un nombre pair ou impair de ligne dans la table pilots. 
 
@@ -132,7 +132,7 @@ COMMIT; -- valider
 ROLLBACK; -- annuler
 ```
 
-## Exercice
+## 03 Exercice
 
 Tapez les lignes de commandes suivantes, que constatez-vous ? Que faudra-t-il faire pour valider les requêtes dans le bloc ?
 
