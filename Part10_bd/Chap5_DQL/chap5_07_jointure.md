@@ -20,7 +20,7 @@ Ecrire et exécuter une requête pour déterminer les pilotes qui n'ont pas de c
 
 ## 03 Exercice sommes des heures de vol
 
-Faites la somme des heures de vols de tous les pilotes de la compagnie AUSTRA Air (recherche par rapport au nom de la compagnie dans la table compagnies).
+Faites la somme des heures de vols de tous les pilotes de la compagnie AUSTRALIA Air (recherche par rapport au nom de la compagnie dans la table compagnies).
 
 ## 04 Exercice sommes des heures par compagnie
 
@@ -46,8 +46,8 @@ Nous allons maintenant présenter une dernière jointure : la jointure bilatéra
 
 ## 06 Exercice bilatéral FULL OUTER JOIN
 
-Sélectionnez les compagnies et leurs pilotes incluant les compagnies n'ayant pas de pilote et les pilotes n'ayant pas de compagnie.
+1. Sélectionnez les compagnies et leurs pilotes incluant les compagnies n'ayant pas de pilote et les pilotes n'ayant pas de compagnie.
 
 Indication : utilisez la clause UNION pour faire la requête FULL OUTER JOIN. **Notez qu'avec la clause UNION les enregistrements identiques ne seront pas répétés dans les résultats.**
 
-Une autre question possible c'est d'afficher que les compagnies qui n'ont pas de pilote et les pilotes qui n'ont pas compaginie.
+2. Une autre question possible c'est d'afficher que les compagnies qui n'ont pas de pilote et les pilotes qui n'ont pas compaginie.
