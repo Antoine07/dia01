@@ -20,7 +20,7 @@ Ecrire et exécuter une requête pour déterminer les pilotes qui n'ont pas de c
 
 ## 03 Exercice sommes des heures de vol
 
-Faites la somme des heures de vols de tous les pilotes de la compagnie AUSTRA Air (recherche par rapport au nom de la compagnie dans la table compagnies).
+Faites la somme des heures de vols de tous les pilotes de la compagnie AUSTRALIA Air (recherche par rapport au nom de la compagnie dans la table compagnies).
 
 ## 04 Exercice sommes des heures par compagnie
 
