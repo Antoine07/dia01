@@ -1,0 +1,9 @@
+
+DROP PROCEDURE IF EXISTS PROCEDURE list_pilots;
+
+DELIMITER |
+CREATE PROCEDURE list_pilots()
+    BEGIN
+        SELECT name FROM pilots;
+    END |
+DELIMITER ; 
