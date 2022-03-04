@@ -2,7 +2,14 @@
 
 Récupérez les données dans votre conteneur de la mamière suivante :
 
-1. Connectez vous au conteneur
+1. Connectez vous au conteneur, il faut lancer Docker puis créez l'image avec le fichier stack.yml
+
+```bash
+docker-compose -f stack.yml up
+
+```
+
+Puis en bash dans le conteneur vous allez utiliser le fichier json des données pour créer la base de données ny et la collection restaurants.
 
 ```bash
 docker exec -it docker_mongo bash 
