@@ -13,7 +13,7 @@ Nous allons voir les clés auto-incrémentées. Elles sont très pratiques. Nous
 
 Considérez le schéma suivant :
 
-![schema](../images/schema.png)
+![schema](images/schema.png)
 
 
 Créez la table planes avec les colonnes suivantes :
@@ -105,15 +105,15 @@ Nous voulons créez une table trips. Elle contiendra les colonnes suivantes. Cho
 - departure
 - arrival
 
-## Exercice écrire les relations
+## 01 Exercice écrire les relations
 
 Vous allez essayer d'écrire les relations entre la table pilots et trips en phasant des phrases en français pour expliciter leurs cardinalités.
 
-## Exercice schéma
+## 02 Exercice schéma
 
 Faites un schéma sur papier, type UML, pour expliciter la relation entre les tables pilots et trips.
 
-## Exercice passer au code
+## 03 Exercice passer au code
 
 Implémentez le code pour rendre effectif votre représentation des relations dans MySQL.
 
@@ -146,14 +146,14 @@ VALUES
 ('ct-12', 5);
 ```
 
-## 01 Exercice les pilotes sans trajet
+## 04 Exercice les pilotes sans trajet
 
 Quels sont les pilotes qui n'ont pas de trajet ?
 
-## 02 Exercice trajet des pilotes
+## 05 Exercice trajet des pilotes
 
 Sélectionnez les trajets de tous les pilotes.
 
-## 03 Exercice procédure
+## 06 Exercice procédure
 
 Créez une procédure pour insérer des pilotes associés à leur(s) avion(s) respectif(s) dans votre base de données. Vous utilisez les transactions.
