@@ -6,7 +6,8 @@ Récupérez les données dans votre conteneur de la mamière suivante :
 
 ```bash
 docker-compose -f stack.yml up
-
+# Pour reconstruire l'image
+docker-compose -f stack.yml up --build
 ```
 
 Puis en bash dans le conteneur vous allez utiliser le fichier json des données pour créer la base de données ny et la collection restaurants.
@@ -30,3 +31,7 @@ mongo -u root -p
 mongo> use ny
 mongo> db.restaurants.count()
 ```
+
+## Remarques Windows
+
+- Attention il faut aller dans les settings > ressources > Network  TODO 

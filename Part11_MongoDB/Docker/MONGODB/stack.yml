@@ -13,7 +13,16 @@ services:
     volumes: 
       - $PWD/data:/data/db
 
-  python:
-    container_name: docker_python
-    image: python
-    
+  web:
+    build: 
+      context: ./app
+      dockerfile: Dockerfile
+    depends_on: 
+      - mongo
+    volumes: 
+      - /app/node_modules
+      - $PWD/app:/app
+    ports: 
+      - "3002:3002"
+
+ 

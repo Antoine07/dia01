@@ -85,7 +85,7 @@ print(_id.getTimestamp());
 La méthode insertMany :
 
 ```js
-try {
+
   db.authors.insertMany([
     {
       name: "Alan",
@@ -100,9 +100,6 @@ try {
       status: "A+",
     },
   ]);
-} catch (e) {
-  print(e);
-}
 ```
 
 Méthode insertOne :
@@ -131,6 +128,9 @@ La commande mongoimport s'exécute dans votre terminale, attention elle ne doit 
 ```bash
 # Import de données csv dans une base de données que l'on va créer train
 mongoimport --db ny --collection restaurants --file primer-dataset.json --drop
+
+# La commande suivante permet de créer une base de données ny avec la collection restaurant si vous avez login/pass
+mongoimport --db ny --collection restaurants --authenticationDatabase admin --username root --password example --drop --file ./primer-dataset.json
 ```
 
 Vérifiez que vos données sont bien importées :
@@ -150,8 +150,6 @@ Pour faire une sauvegarde d'une collection au format BJSON tapez la ligne de com
 
 ```bash
 mongodump --collection restaurants --db ny
-
-mongoimport --db ny --collection restaurants --authenticationDatabase admin --username root --password example --drop --file ./primer-dataset.json
 ```
 
 L'instruction suivante correspond à un SELECT \* FROM restaurants en SQL :
@@ -236,8 +234,6 @@ db.restaurants.find(
 );
 ```
 
-
-
 Cela correspondrait (...) en SQL à la requête suivante :
 
 ```sql
@@ -253,16 +249,18 @@ AND ( `name` LIKE '/^B/' OR `name` LIKE '/^W/')
 
 Sans utiliser la méthode count dans un premier temps comptez le nombre de restaurants dans le quartier de Brooklyn.
 
-Pour itérer sur une requête vous utiliserez l'une des deux syntaxes suivantes :
+Indications : pour itérer sur une requête vous utiliserez l'une des deux syntaxes suivantes :
 
 ```js
 // 1
+let count = 0;
 db.collection.find().forEach((doc) => print(tojson(doc)));
 
 // 2
+let count = 0;
 const myCursor = db.users.find(restriction);
 while (myCursor.hasNext()) {
-  print(tojson(myCursor.next()));
+  myCursor.next();
 }
 ```
 
@@ -301,11 +299,16 @@ $in, $nin
 
 // Ou
 $or
-"notes : { "$or": [{"$gt" : 10}, {"$lt" : 5} ] }
+"$or" : [
+  { "notes" : { "$gt" : 10 } },
+  { "notes" : { "$lt" : 5  } }
+]
 // and
 $and
-
-"notes : { "$and": [{"$gt" : 10}, {"$lt" : 5} ] }
+"$and" : [
+  { "notes" : { "$gt" : 10 } },
+  { "notes" : { "$lt" : 5  } }
+]
 
 // négation
 $not
@@ -361,7 +364,7 @@ Pour utiliser une Regex complexe avec Mongo il faudra utiliser la syntaxe suivan
 
 MongoDB utilise Perl compatible regular expressions (i.e. "PCRE" ) version 8.42 en 2021 avec le support UTF-8.
 
-## Partie 1 Liste d'Exercices
+## 03 Exercices liste
 
 ### 01. Combien y a t il de restaurants qui font de la cuisine italienne et qui ont eu un score de 10 au moins ?
 
@@ -417,18 +420,6 @@ Comptez également leurs nombres total et calculez la différences avec Coffee e
 
 ### 12. Reprenez la question 11 et affichez tous les noms de ces restaurants en majuscule avec leur dernière date et permière date d'évaluation.
 
-### 13. Précisez également le quartier dans lequel ce restaurent se trouve.
-
-Indications : utilisez les opérateurs suivants :
-
-```js
-{
-  $size: 4;
-}
-ISODate("2012-10-24T00:00:00Z"); // UTC -2h par rapport à l'heure française
-"bonjour".toUpperCase();
-```
-
 ## Recherche de restaurants à proximité d'un lieu
 
 MongoDB permet de gérér des points GPS. Dans la collection restaurants nous avons un champ address.coord qui correspond à des coordonnées GPS (longitude & latitude).
@@ -439,7 +430,7 @@ Nous allons utiliser les coordonnées sphériques de MongoDB. Pour l'implémente
 db.restaurants.createIndex({ "address.coord": "2dsphere" });
 ```
 
-### 03 Exercice GPS
+### 04 Exercice GPS
 
 Après avoir créer l'index 2dsphere ci-dessus, trouvez tous les restaurants qui sont à 5 miles autour du point GPS suivant, donnez leurs noms, leur quartier ainsi que les coordonnées GPS en console, aidez-vous des indications ci-après :
 
@@ -454,7 +445,7 @@ Indications : vous utiliserez la syntaxe suivante avec les opérateurs MongoDB :
 { $nearSphere: { $geometry: { type: "Point", coordinates: coordinate }, $maxDistance: VOTRE_DISTANCE_EN_METRE } }
 ```
 
-## Recherche par rapport à la date
+## 05 Exercice Recherche par rapport à la date (répondre sans coder)
 
 Sans exécutez la requête suivante, qu'affiche-t-elle ?
 
@@ -467,15 +458,7 @@ db.restaurants.find(
 );
 ```
 
-## 04 Exercice appréciation et date
-
-Affichez tous les noms  des restaurants qui ont une appréciation (grades) dont toutes les dates sont supérieures à la date suivante:
-
-```js
- ISODate("2012-10-24T00:00:00Z")
-```
-
-### 05 Exercices supplémentaires à faire en TP
+### 06 Exercices supplémentaires 
 
 1. Affichez la liste des restaurants dont le nom commence et se termine par une voyelle.
 
@@ -490,7 +473,7 @@ Remarque vous pouvez soit programmer cet affichage, soit directement utiliser un
 ```
 
 
-## Lire un document entièrement résumé
+## Note de cours sur la notion de cursor
 
 La méthode find permet de lire les documents dans une collection, par défaut elle ne retournera que 20 documents au maximum.
 
@@ -515,7 +498,7 @@ while (resCursor1.hasNext()) {
 }
 ```
 
-Avec la méthode **foreEach** :
+Avec la méthode **forEach** :
 
 ```js
 const resCursor2 = db.restaurants.find();

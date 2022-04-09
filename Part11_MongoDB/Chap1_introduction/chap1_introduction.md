@@ -24,7 +24,6 @@ Le modèle des documents est basé sur un système de **clés/valeurs**. Chaque 
 
 Ci-dessous un exemple de document :
 
-\newpage
 
 ```json
 {
@@ -208,7 +207,6 @@ db.address.drop()
 db.dropDatabase()
 ```
 
-\newpage
 
 ## Outils graphique Robo 3T
 
