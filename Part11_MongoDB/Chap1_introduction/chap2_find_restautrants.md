@@ -31,7 +31,7 @@ db.authors.insert({
 });
 
 // Plusieurs dans un tableau
-db.authors.insert([
+db.authors.insertMany([
   {
     name: "Alan",
     grade: "master 5",
