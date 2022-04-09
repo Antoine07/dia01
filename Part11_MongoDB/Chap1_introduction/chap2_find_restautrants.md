@@ -267,7 +267,7 @@ while (myCursor.hasNext()) {
 Puis comparez le résultat avec la méthode count :
 
 ```js
-db.collection.findOne(query, restriction).count();
+db.collection.find(query, restriction).count();
 ```
 
 ### Présentation des opérateurs MongoDB pour le filtrage des données
