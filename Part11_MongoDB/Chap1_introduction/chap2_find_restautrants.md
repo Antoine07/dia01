@@ -23,7 +23,7 @@ Insérer une donnée ou plusieurs données en même temps à l'aide de la métho
 
 ```js
 // Un seul document
-db.authors.insert({
+db.authors.insertOne({
   name: "Alan",
   grade: "master 5",
   notes: [11, 20, 18, 19],
