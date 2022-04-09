@@ -23,7 +23,7 @@ Insérer une donnée ou plusieurs données en même temps à l'aide de la métho
 
 ```js
 // Un seul document
-db.authors.insert({
+db.authors.insertOne({
   name: "Alan",
   grade: "master 5",
   notes: [11, 20, 18, 19],
@@ -31,7 +31,7 @@ db.authors.insert({
 });
 
 // Plusieurs dans un tableau
-db.authors.insert([
+db.authors.insertMany([
   {
     name: "Alan",
     grade: "master 5",
@@ -267,7 +267,7 @@ while (myCursor.hasNext()) {
 Puis comparez le résultat avec la méthode count :
 
 ```js
-db.collection.findOne(query, restriction).count();
+db.collection.find(query, restriction).count();
 ```
 
 ### Présentation des opérateurs MongoDB pour le filtrage des données
