@@ -11,6 +11,7 @@
 #### Ennoncés
 
 - 01_préparation_de_données
+- 02_création_de_model
 
 
 #### Correction à la fin de chaque journée/chapitre
